@@ -4,10 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aerium Residence — Taman Permata Buana, Jakarta Barat</title>
+<link rel="preload" as="image" href="images/web/outdoor-pool-evening-view-aerium.jpg" imagesrcset="images/web/outdoor-pool-evening-view-aerium-sm.jpg 900w, images/web/outdoor-pool-evening-view-aerium.jpg 2000w" imagesizes="100vw">
 <meta name="description" content="Aerium Residence by Sinar Mas Land di Taman Permata Buana, Jakarta Barat. 75% area hijau, Sky Garden setiap 4 lantai, apartemen dog-friendly pertama. Mulai Rp 3 Miliar. Promo Free DP / Tanpa DP.">
 <meta property="og:title" content="Aerium Residence — Tempat Anda Bernapas Lagi">
 <meta property="og:description" content="75% area hijau. Sky Garden setiap 4 lantai. Mulai Rp 3 Miliar. Promo Tanpa DP.">
-<meta property="og:image" content="images/hero.jpg">
+<meta property="og:image" content="images/web/outdoor-pool-evening-view-aerium.jpg">
 <meta name="theme-color" content="#1F3A33">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -651,7 +652,8 @@ section {
     inset: 0;
     z-index: -1;
     background:
-        linear-gradient(180deg, rgba(14, 29, 26, 0.55) 0%, rgba(14, 29, 26, 0.05) 35%, rgba(14, 29, 26, 0.35) 60%, rgba(14, 29, 26, 0.9) 100%);
+        linear-gradient(90deg, rgba(14, 29, 26, 0.72) 0%, rgba(14, 29, 26, 0.35) 45%, rgba(14, 29, 26, 0) 75%),
+        linear-gradient(180deg, rgba(14, 29, 26, 0.55) 0%, rgba(14, 29, 26, 0.1) 35%, rgba(14, 29, 26, 0.4) 60%, rgba(14, 29, 26, 0.92) 100%);
 }
 
 .hero-orb {
@@ -697,6 +699,7 @@ section {
 
 .hero h1 {
     max-width: 14ch;
+    text-shadow: 0 2px 30px rgba(14, 29, 26, 0.45);
     margin-bottom: 1.5rem;
     animation: fadeInUp 1.2s 0.15s ease-out both;
 }
@@ -1673,6 +1676,7 @@ section {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 220px;
+    grid-auto-flow: dense;
     gap: 1rem;
 }
 
@@ -1691,8 +1695,8 @@ section {
     grid-column: span 2;
 }
 
-.gallery-item:nth-child(9) {
-    grid-row: span 2;
+.gallery-item:nth-child(11) {
+    grid-column: span 2;
 }
 
 .gallery-item > img {
@@ -2522,9 +2526,6 @@ section {
         grid-auto-rows: 180px;
     }
 
-    .gallery-item:nth-child(9) {
-        grid-row: span 1;
-    }
 
     .compare {
         grid-template-columns: 1fr;
@@ -2687,7 +2688,7 @@ section {
      ===================================================== -->
 <section class="hero" id="hero">
     <div class="hero-bg media tone-sky">
-        <img src="images/hero.jpg" alt="Aerium Residence, Taman Permata Buana" onerror="this.remove()">
+        <img src="images/web/outdoor-pool-evening-view-aerium.jpg" srcset="images/web/outdoor-pool-evening-view-aerium-sm.jpg 900w, images/web/outdoor-pool-evening-view-aerium.jpg 2000w" sizes="100vw" alt="Kolam renang Aerium Residence saat senja, Taman Permata Buana" fetchpriority="high" onerror="this.remove()">
     </div>
     <div class="hero-orb" aria-hidden="true"></div>
 
@@ -2769,10 +2770,10 @@ section {
 
         <div class="desire-visual reveal reveal-delay-2">
             <div class="media media-main tone-sky">
-                <img src="images/living.jpg" alt="Ruang tamu unit Aerium" loading="lazy" onerror="this.remove()">
+                <img src="images/web/high-floor-living-2-bedroom-aerium-sm.jpg" srcset="images/web/high-floor-living-2-bedroom-aerium-sm.jpg 900w, images/web/high-floor-living-2-bedroom-aerium.jpg 2000w" sizes="(max-width: 960px) 100vw, 50vw" alt="Ruang tamu 2 Bedroom lantai tinggi dengan view kota" loading="lazy" onerror="this.remove()">
             </div>
             <div class="media media-sub tone-warm">
-                <img src="images/balcony.jpg" alt="Balkon unit Aerium" loading="lazy" onerror="this.remove()">
+                <img src="images/web/master-bedroom-with-greenery-view-sm.jpg" srcset="images/web/master-bedroom-with-greenery-view-sm.jpg 900w, images/web/master-bedroom-with-greenery-view.jpg 2000w" sizes="(max-width: 960px) 100vw, 50vw" alt="Kamar tidur dengan view pepohonan hijau" loading="lazy" onerror="this.remove()">
             </div>
         </div>
     </div>
@@ -2850,7 +2851,7 @@ section {
             <article class="unit-card reveal" id="unit-2br-compact">
                 <span class="unit-badge is-brass">Entry · Paling Diminati</span>
                 <div class="image-container media tone-sky">
-                    <img src="images/unit-2br-d.jpg" alt="Unit 2 Bedroom D" loading="lazy" onerror="this.remove()">
+                    <img src="images/web/wider-living-room-aerium-sm.jpg" srcset="images/web/wider-living-room-aerium-sm.jpg 900w, images/web/wider-living-room-aerium.jpg 2000w" sizes="(max-width: 960px) 100vw, 50vw" alt="Ruang tamu show unit Aerium" loading="lazy" onerror="this.remove()">
                 </div>
                 <div class="unit-body">
                     <h3>2 Bedroom D</h3>
@@ -2877,7 +2878,7 @@ section {
             <article class="unit-card reveal reveal-delay-1" id="unit-2br">
                 <span class="unit-badge">Lebih Lapang</span>
                 <div class="image-container media">
-                    <img src="images/unit-2br-a.jpg" alt="Unit 2 Bedroom A / B" loading="lazy" onerror="this.remove()">
+                    <img src="images/web/living-room-high-floor-sm.jpg" srcset="images/web/living-room-high-floor-sm.jpg 900w, images/web/living-room-high-floor.jpg 2000w" sizes="(max-width: 960px) 100vw, 50vw" alt="Ruang tamu & ruang makan show unit Aerium" loading="lazy" onerror="this.remove()">
                 </div>
                 <div class="unit-body">
                     <h3>2 Bedroom A / B</h3>
@@ -2904,7 +2905,7 @@ section {
             <article class="unit-card reveal reveal-delay-2" id="unit-3br">
                 <span class="unit-badge">Keluarga Besar</span>
                 <div class="image-container media tone-warm">
-                    <img src="images/unit-3br.jpg" alt="Unit 3 Bedroom" loading="lazy" onerror="this.remove()">
+                    <img src="images/web/living-room-high-floor-aerium-sm.jpg" srcset="images/web/living-room-high-floor-aerium-sm.jpg 900w, images/web/living-room-high-floor-aerium.jpg 2000w" sizes="(max-width: 960px) 100vw, 50vw" alt="Ruang makan & living room lantai tinggi" loading="lazy" onerror="this.remove()">
                 </div>
                 <div class="unit-body">
                     <h3>3 Bedroom</h3>
@@ -2947,11 +2948,11 @@ section {
 
         <div class="sky-layout">
             <div class="sky-feature media tone-sky reveal">
-                <img src="images/sky-garden.jpg" alt="Sky Garden Aerium" loading="lazy" onerror="this.remove()">
+                <img src="images/web/wide-outdoor-pool-aerium.jpg" srcset="images/web/wide-outdoor-pool-aerium-sm.jpg 900w, images/web/wide-outdoor-pool-aerium.jpg 2000w" sizes="100vw" alt="Pool deck & lounge outdoor Aerium" loading="lazy" onerror="this.remove()">
                 <div class="sky-feature-text">
-                    <span class="section-label is-light">Sky Garden</span>
-                    <h3>Taman di ketinggian, setiap empat lantai.</h3>
-                    <p>Anda tidak perlu turun ke lobi untuk menyentuh rumput. Taman Anda ada beberapa langkah dari lift.</p>
+                    <span class="section-label is-light">Pool Deck &amp; Lounge</span>
+                    <h3>Sore hari, kopi Anda di sini.</h3>
+                    <p>Kursi rotan di tepi kolam, tanaman di sepanjang deck, dan langit terbuka di atasnya. Bukan kafe — ini halaman belakang Anda.</p>
                 </div>
             </div>
 
@@ -2961,8 +2962,8 @@ section {
                     <p>dari total lahan 1,8 hektar dialokasikan untuk area hijau &amp; fasilitas outdoor.</p>
                 </div>
                 <div class="media tone-warm reveal reveal-delay-2">
-                    <img src="images/landscape.jpg" alt="Lanskap hijau Aerium" loading="lazy" onerror="this.remove()">
-                    <span class="media-caption">Landscape</span>
+                    <img src="images/web/children-playground-aerium-sm.jpg" srcset="images/web/children-playground-aerium-sm.jpg 900w, images/web/children-playground-aerium.jpg 2000w" sizes="(max-width: 960px) 100vw, 50vw" alt="Taman & fitness outdoor Aerium" loading="lazy" onerror="this.remove()">
+                    <span class="media-caption">Taman &amp; Outdoor Fitness</span>
                 </div>
             </div>
         </div>
@@ -2985,8 +2986,8 @@ section {
             </div>
             <div class="sky-point reveal reveal-delay-3">
                 <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M24 40V20M24 20c0-7 6-12 14-12 0 8-6 12-14 12zM24 26c0-6-5-10-12-10 0 7 5 10 12 10z"/></svg>
-                <h4>Standar Jepang</h4>
-                <p>Dikembangkan Sinar Mas Land bersama Itochu &amp; Shimizu — perhatian pada detail yang terasa setiap hari.</p>
+                <h4>Sky Garden</h4>
+                <p>Taman di ketinggian setiap 4 lantai. Hijau yang bisa Anda sentuh tanpa turun ke lobi.</p>
             </div>
         </div>
     </div>
@@ -2999,16 +3000,16 @@ section {
     <div class="container paws-grid">
         <div class="paws-visual reveal">
             <div class="media tone-warm">
-                <img src="images/dog-park.jpg" alt="Dog park Aerium" loading="lazy" onerror="this.remove()">
-                <span class="media-caption">Dog Park</span>
+                <img src="images/web/outdoor-pool-view-housing-aerium-sm.jpg" srcset="images/web/outdoor-pool-view-housing-aerium-sm.jpg 900w, images/web/outdoor-pool-view-housing-aerium.jpg 2000w" sizes="(max-width: 960px) 100vw, 50vw" alt="Area outdoor hijau Aerium" loading="lazy" onerror="this.remove()">
+                <span class="media-caption">Area Outdoor</span>
             </div>
             <div class="media tone-sky">
-                <img src="images/dog-pool.jpg" alt="Dog pool Aerium" loading="lazy" onerror="this.remove()">
-                <span class="media-caption">Dog Pool</span>
+                <img src="images/web/pool-aerium-luar-1-sm.jpg" srcset="images/web/pool-aerium-luar-1-sm.jpg 900w, images/web/pool-aerium-luar-1.jpg 2000w" sizes="(max-width: 960px) 100vw, 50vw" alt="Kolam renang outdoor Aerium" loading="lazy" onerror="this.remove()">
+                <span class="media-caption">Pool Area</span>
             </div>
             <div class="media">
-                <img src="images/dog-hotel.jpg" alt="Dog hotel Aerium" loading="lazy" onerror="this.remove()">
-                <span class="media-caption">Dog Hotel</span>
+                <img src="images/web/aerium-corridor-sm.jpg" srcset="images/web/aerium-corridor-sm.jpg 900w, images/web/aerium-corridor.jpg 2000w" sizes="(max-width: 960px) 100vw, 50vw" alt="Koridor Aerium dengan handrail" loading="lazy" onerror="this.remove()">
+                <span class="media-caption">Koridor</span>
             </div>
         </div>
 
@@ -3044,14 +3045,14 @@ section {
             <span class="section-label is-light reveal">Fasilitas</span>
             <h2 class="reveal reveal-delay-1">Hari libur Anda <em>tidak perlu keluar gerbang.</em></h2>
             <p class="lead reveal reveal-delay-2">
-                Berenang pagi, olahraga sore, makan malam di alfresco, meeting mendadak — semuanya di bawah satu atap.
+                Berenang pagi, gym sore, sauna malam, anak-anak di playground, meeting mendadak di library — semuanya tanpa keluar gerbang.
             </p>
         </div>
 
         <div class="facility-grid">
             <div class="facility-card is-wide is-tall reveal">
                 <div class="media tone-sky">
-                    <img src="images/pool-outdoor.jpg" alt="Kolam renang outdoor" loading="lazy" onerror="this.remove()">
+                    <img src="images/web/pool-aerium-luar-2.jpg" srcset="images/web/pool-aerium-luar-2-sm.jpg 900w, images/web/pool-aerium-luar-2.jpg 2000w" sizes="100vw" alt="Kolam renang outdoor & tower Aerium" loading="lazy" onerror="this.remove()">
                 </div>
                 <div class="facility-label">
                     <h4>Outdoor Swimming Pool</h4>
@@ -3060,7 +3061,7 @@ section {
             </div>
             <div class="facility-card reveal reveal-delay-1">
                 <div class="media tone-night">
-                    <img src="images/pool-indoor.jpg" alt="Kolam renang indoor" loading="lazy" onerror="this.remove()">
+                    <img src="images/web/indoor-pool-aerium-sm.jpg" srcset="images/web/indoor-pool-aerium-sm.jpg 900w, images/web/indoor-pool-aerium.jpg 2000w" sizes="(max-width: 960px) 100vw, 50vw" alt="Kolam renang indoor semi-terbuka" loading="lazy" onerror="this.remove()">
                 </div>
                 <div class="facility-label">
                     <h4>Indoor Pool</h4>
@@ -3069,7 +3070,7 @@ section {
             </div>
             <div class="facility-card reveal reveal-delay-2">
                 <div class="media">
-                    <img src="images/gym.jpg" alt="Gym eksklusif" loading="lazy" onerror="this.remove()">
+                    <img src="images/web/gym-aerium-sm.jpg" srcset="images/web/gym-aerium-sm.jpg 900w, images/web/gym-aerium.jpg 2000w" sizes="(max-width: 960px) 100vw, 50vw" alt="Gym dengan jendela kaca lebar" loading="lazy" onerror="this.remove()">
                 </div>
                 <div class="facility-label">
                     <h4>Exclusive Gym</h4>
@@ -3078,29 +3079,47 @@ section {
             </div>
             <div class="facility-card reveal">
                 <div class="media tone-warm">
-                    <img src="images/lounge.jpg" alt="Exclusive lounge" loading="lazy" onerror="this.remove()">
+                    <img src="images/web/lobby-aerium-sm.jpg" srcset="images/web/lobby-aerium-sm.jpg 900w, images/web/lobby-aerium.jpg 2000w" sizes="(max-width: 960px) 100vw, 50vw" alt="Grand lobby marmer Aerium" loading="lazy" onerror="this.remove()">
                 </div>
                 <div class="facility-label">
-                    <h4>Exclusive Lounge</h4>
-                    <p>Terima tamu dengan kesan yang pantas.</p>
+                    <h4>Grand Lobby</h4>
+                    <p>Marmer, kaca setinggi dua lantai. Tamu Anda terkesan sebelum sampai ke pintu unit.</p>
                 </div>
             </div>
             <div class="facility-card reveal reveal-delay-1">
                 <div class="media tone-warm">
-                    <img src="images/alfresco.jpg" alt="Alfresco dining" loading="lazy" onerror="this.remove()">
+                    <img src="images/web/perpustakaan-aerium-sm.jpg" srcset="images/web/perpustakaan-aerium-sm.jpg 900w, images/web/perpustakaan-aerium.jpg 2000w" sizes="(max-width: 960px) 100vw, 50vw" alt="Library & meeting room Aerium" loading="lazy" onerror="this.remove()">
                 </div>
                 <div class="facility-label">
-                    <h4>Alfresco Dining</h4>
-                    <p>Makan malam di udara terbuka, tanpa perlu reservasi restoran.</p>
+                    <h4>Library &amp; Meeting Room</h4>
+                    <p>Kerja dari rumah tanpa klien melihat cucian di belakang Anda.</p>
                 </div>
             </div>
-            <div class="facility-card is-full reveal reveal-delay-2">
-                <div class="media tone-night">
-                    <img src="images/meeting.jpg" alt="Meeting room" loading="lazy" onerror="this.remove()">
+            <div class="facility-card reveal reveal-delay-2">
+                <div class="media tone-warm">
+                    <img src="images/web/aerium-sauna-sm.jpg" srcset="images/web/aerium-sauna-sm.jpg 900w, images/web/aerium-sauna.jpg 2000w" sizes="(max-width: 960px) 100vw, 25vw" alt="Sauna Aerium" loading="lazy" onerror="this.remove()">
                 </div>
                 <div class="facility-label">
-                    <h4>Meeting Room</h4>
-                    <p>Kerja dari rumah tanpa klien melihat cucian di belakang Anda.</p>
+                    <h4>Sauna</h4>
+                    <p>Lepaskan lelah minggu ini, dua lantai di bawah unit Anda.</p>
+                </div>
+            </div>
+            <div class="facility-card reveal">
+                <div class="media tone-sky">
+                    <img src="images/web/all-outdoor-pool-aerium-sm.jpg" srcset="images/web/all-outdoor-pool-aerium-sm.jpg 900w, images/web/all-outdoor-pool-aerium.jpg 2000w" sizes="(max-width: 960px) 100vw, 25vw" alt="Kolam anak dengan water play" loading="lazy" onerror="this.remove()">
+                </div>
+                <div class="facility-label">
+                    <h4>Kids Pool</h4>
+                    <p>Anak main air, Anda mengawasi dari kursi di tepi kolam.</p>
+                </div>
+            </div>
+            <div class="facility-card is-wide reveal reveal-delay-1">
+                <div class="media tone-sky">
+                    <img src="images/web/children-playground-aerium-2-sm.jpg" srcset="images/web/children-playground-aerium-2-sm.jpg 900w, images/web/children-playground-aerium-2.jpg 2000w" sizes="(max-width: 960px) 100vw, 50vw" alt="Children playground Aerium" loading="lazy" onerror="this.remove()">
+                </div>
+                <div class="facility-label">
+                    <h4>Children Playground</h4>
+                    <p>Perosotan, ayunan, lantai karet yang aman — di dalam area yang dijaga 4 lapis keamanan.</p>
                 </div>
             </div>
         </div>
@@ -3166,20 +3185,21 @@ section {
         <div class="section-head is-center">
             <span class="section-label reveal">Galeri</span>
             <h2 class="reveal reveal-delay-1">Lihat dulu. <em>Rasakan</em> sendiri.</h2>
+            <p class="lead reveal reveal-delay-2" style="margin: 0 auto;">Foto asli show unit &amp; fasilitas Aerium. Klik untuk memperbesar.</p>
         </div>
 
         <div class="gallery-grid" id="galleryGrid">
-            <div class="gallery-item media tone-sky reveal" data-src="images/gallery-01.jpg"><img src="images/gallery-01.jpg" alt="Galeri Aerium 1" loading="lazy" onerror="this.remove()"></div>
-            <div class="gallery-item media reveal reveal-delay-1" data-src="images/gallery-02.jpg"><img src="images/gallery-02.jpg" alt="Galeri Aerium 2" loading="lazy" onerror="this.remove()"></div>
-            <div class="gallery-item media tone-warm reveal reveal-delay-2" data-src="images/gallery-03.jpg"><img src="images/gallery-03.jpg" alt="Galeri Aerium 3" loading="lazy" onerror="this.remove()"></div>
-            <div class="gallery-item media tone-night reveal" data-src="images/gallery-04.jpg"><img src="images/gallery-04.jpg" alt="Galeri Aerium 4" loading="lazy" onerror="this.remove()"></div>
-            <div class="gallery-item media tone-sky reveal reveal-delay-1" data-src="images/gallery-05.jpg"><img src="images/gallery-05.jpg" alt="Galeri Aerium 5" loading="lazy" onerror="this.remove()"></div>
-            <div class="gallery-item media tone-warm reveal reveal-delay-2" data-src="images/gallery-06.jpg"><img src="images/gallery-06.jpg" alt="Galeri Aerium 6" loading="lazy" onerror="this.remove()"></div>
-            <div class="gallery-item media reveal" data-src="images/gallery-07.jpg"><img src="images/gallery-07.jpg" alt="Galeri Aerium 7" loading="lazy" onerror="this.remove()"></div>
-            <div class="gallery-item media tone-night reveal reveal-delay-1" data-src="images/gallery-08.jpg"><img src="images/gallery-08.jpg" alt="Galeri Aerium 8" loading="lazy" onerror="this.remove()"></div>
-            <div class="gallery-item media tone-sky reveal reveal-delay-2" data-src="images/gallery-09.jpg"><img src="images/gallery-09.jpg" alt="Galeri Aerium 9" loading="lazy" onerror="this.remove()"></div>
-            <div class="gallery-item media tone-warm reveal" data-src="images/gallery-10.jpg"><img src="images/gallery-10.jpg" alt="Galeri Aerium 10" loading="lazy" onerror="this.remove()"></div>
-            <div class="gallery-item media reveal reveal-delay-1" data-src="images/gallery-11.jpg"><img src="images/gallery-11.jpg" alt="Galeri Aerium 11" loading="lazy" onerror="this.remove()"></div>
+            <div class="gallery-item media tone-sky reveal" data-src="images/web/living-aerium-super-wide-high-floor.jpg"><img src="images/web/living-aerium-super-wide-high-floor-sm.jpg" srcset="images/web/living-aerium-super-wide-high-floor-sm.jpg 900w, images/web/living-aerium-super-wide-high-floor.jpg 2000w" sizes="(max-width: 960px) 100vw, 50vw" alt="Ruang tamu show unit, lantai tinggi" loading="lazy" onerror="this.remove()"></div>
+            <div class="gallery-item media reveal reveal-delay-1" data-src="images/web/kitchen-2-bedroom-wide.jpg"><img src="images/web/kitchen-2-bedroom-wide-sm.jpg" srcset="images/web/kitchen-2-bedroom-wide-sm.jpg 900w, images/web/kitchen-2-bedroom-wide.jpg 2000w" sizes="(max-width: 960px) 100vw, 50vw" alt="Dapur dengan island, unit 2 Bedroom" loading="lazy" onerror="this.remove()"></div>
+            <div class="gallery-item media tone-warm reveal reveal-delay-2" data-src="images/web/bedroom-high-floor.jpg"><img src="images/web/bedroom-high-floor-sm.jpg" srcset="images/web/bedroom-high-floor-sm.jpg 900w, images/web/bedroom-high-floor.jpg 2000w" sizes="(max-width: 960px) 100vw, 50vw" alt="Kamar tidur lantai tinggi" loading="lazy" onerror="this.remove()"></div>
+            <div class="gallery-item media tone-night reveal" data-src="images/web/outdoor-pool-plus-side-area-aerium.jpg"><img src="images/web/outdoor-pool-plus-side-area-aerium-sm.jpg" srcset="images/web/outdoor-pool-plus-side-area-aerium-sm.jpg 900w, images/web/outdoor-pool-plus-side-area-aerium.jpg 2000w" sizes="(max-width: 960px) 100vw, 50vw" alt="Kolam renang outdoor & tower Aerium" loading="lazy" onerror="this.remove()"></div>
+            <div class="gallery-item media tone-sky reveal reveal-delay-1" data-src="images/web/kitchen-aerium.jpg"><img src="images/web/kitchen-aerium-sm.jpg" srcset="images/web/kitchen-aerium-sm.jpg 900w, images/web/kitchen-aerium.jpg 2000w" sizes="(max-width: 960px) 100vw, 50vw" alt="Dapur bersih unit Aerium" loading="lazy" onerror="this.remove()"></div>
+            <div class="gallery-item media tone-warm reveal reveal-delay-2" data-src="images/web/wide-living-room-low-floor.jpg"><img src="images/web/wide-living-room-low-floor-sm.jpg" srcset="images/web/wide-living-room-low-floor-sm.jpg 900w, images/web/wide-living-room-low-floor.jpg 2000w" sizes="(max-width: 960px) 100vw, 50vw" alt="Ruang tamu dengan view hijau" loading="lazy" onerror="this.remove()"></div>
+            <div class="gallery-item media reveal" data-src="images/web/all-outdoor-pool-aerium.jpg"><img src="images/web/all-outdoor-pool-aerium-sm.jpg" srcset="images/web/all-outdoor-pool-aerium-sm.jpg 900w, images/web/all-outdoor-pool-aerium.jpg 2000w" sizes="(max-width: 960px) 100vw, 50vw" alt="Kolam anak & water play" loading="lazy" onerror="this.remove()"></div>
+            <div class="gallery-item media tone-night reveal reveal-delay-1" data-src="images/web/kitchen-2-bedroom.jpg"><img src="images/web/kitchen-2-bedroom-sm.jpg" srcset="images/web/kitchen-2-bedroom-sm.jpg 900w, images/web/kitchen-2-bedroom.jpg 2000w" sizes="(max-width: 960px) 100vw, 50vw" alt="Dapur island unit 2 Bedroom" loading="lazy" onerror="this.remove()"></div>
+            <div class="gallery-item media tone-sky reveal reveal-delay-2" data-src="images/web/living-room.jpg"><img src="images/web/living-room-sm.jpg" srcset="images/web/living-room-sm.jpg 900w, images/web/living-room.jpg 2000w" sizes="(max-width: 960px) 100vw, 50vw" alt="Pantry & ruang makan show unit" loading="lazy" onerror="this.remove()"></div>
+            <div class="gallery-item media tone-warm reveal" data-src="images/web/children-playground-aerium-2.jpg"><img src="images/web/children-playground-aerium-2-sm.jpg" srcset="images/web/children-playground-aerium-2-sm.jpg 900w, images/web/children-playground-aerium-2.jpg 2000w" sizes="(max-width: 960px) 100vw, 50vw" alt="Children playground Aerium" loading="lazy" onerror="this.remove()"></div>
+            <div class="gallery-item media reveal reveal-delay-1" data-src="images/web/outdoor-pool-view-housing-aerium.jpg"><img src="images/web/outdoor-pool-view-housing-aerium-sm.jpg" srcset="images/web/outdoor-pool-view-housing-aerium-sm.jpg 900w, images/web/outdoor-pool-view-housing-aerium.jpg 2000w" sizes="(max-width: 960px) 100vw, 50vw" alt="Kolam renang dengan view Taman Permata Buana" loading="lazy" onerror="this.remove()"></div>
         </div>
     </div>
 </section>
@@ -3316,7 +3336,7 @@ section {
      ===================================================== -->
 <section class="contact section-pad" id="kontak">
     <div class="contact-bg media tone-night">
-        <img src="images/night.jpg" alt="" loading="lazy" onerror="this.remove()">
+        <img src="images/web/indoor-pool-night-aerium.jpg" srcset="images/web/indoor-pool-night-aerium-sm.jpg 900w, images/web/indoor-pool-night-aerium.jpg 2000w" sizes="100vw" alt="" loading="lazy" onerror="this.remove()">
     </div>
     <div class="container contact-grid">
         <div>
