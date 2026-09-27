@@ -1,0 +1,3653 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aerium Residence — Taman Permata Buana, Jakarta Barat</title>
+<meta name="description" content="Aerium Residence by Sinar Mas Land di Taman Permata Buana, Jakarta Barat. 75% area hijau, Sky Garden setiap 4 lantai, apartemen dog-friendly pertama. Mulai Rp 3 Miliar. Promo Free DP / Tanpa DP.">
+<meta property="og:title" content="Aerium Residence — Tempat Anda Bernapas Lagi">
+<meta property="og:description" content="75% area hijau. Sky Garden setiap 4 lantai. Mulai Rp 3 Miliar. Promo Tanpa DP.">
+<meta property="og:image" content="images/hero.jpg">
+<meta name="theme-color" content="#1F3A33">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style"
+  href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+  onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap">
+</noscript>
+
+<style>
+/* =========================================================
+   AERIUM RESIDENCE — DESIGN TOKENS
+   Narrative: "Air / Breath" — green sanctuary lifted into the sky.
+   Palette: eucalyptus forest, sage mist, warm linen, brushed brass.
+   ========================================================= */
+:root {
+    --color-forest: #1F3A33;
+    --color-forest-deep: #142824;
+    --color-forest-ink: #0E1D1A;
+    --color-eucalyptus: #3E6B5E;
+    --color-sage: #8FAE9B;
+    --color-sage-mist: #DCE6DE;
+    --color-linen: #F6F1E7;
+    --color-linen-warm: #EFE6D4;
+    --color-sand: #D9C6A3;
+    --color-brass: #B8905A;
+    --color-brass-light: #D8B57F;
+    --color-terracotta: #B8664A;
+    --color-text: #23302C;
+    --color-text-soft: #56645F;
+    --color-text-inverse: #F6F1E7;
+    --color-line: rgba(31, 58, 51, 0.12);
+    --color-line-inverse: rgba(246, 241, 231, 0.14);
+    --color-wa: #25D366;
+
+    --font-display: 'Fraunces', 'Times New Roman', Georgia, serif;
+    --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.75rem;
+    --space-lg: 3rem;
+    --space-xl: 5rem;
+    --space-2xl: 8rem;
+
+    --radius-sm: 6px;
+    --radius-md: 14px;
+    --radius-lg: 24px;
+    --radius-pill: 999px;
+
+    --container: 1240px;
+    --nav-height: 78px;
+
+    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-cinema: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-card: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    --shadow-soft: 0 2px 10px rgba(14, 29, 26, 0.08);
+    --shadow-lift: 0 24px 60px rgba(14, 29, 26, 0.16);
+    --shadow-deep: 0 32px 80px rgba(14, 29, 26, 0.24);
+
+    --scroll-y: 0px;
+}
+
+/* =========================================================
+   RESET & BASE
+   ========================================================= */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--nav-height);
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text);
+    background: var(--color-linen);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: inherit;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 clamp(1rem, 4vw, 2.5rem);
+}
+
+/* =========================================================
+   TYPOGRAPHY ROLES
+   ========================================================= */
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    font-variation-settings: "opsz" 120;
+}
+
+h1 {
+    font-size: clamp(2.6rem, 6.4vw, 5.6rem);
+    font-weight: 300;
+}
+
+h2 {
+    font-size: clamp(2rem, 4.2vw, 3.4rem);
+    font-weight: 300;
+}
+
+h3 {
+    font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+}
+
+h1 em,
+h2 em,
+h3 em {
+    font-style: italic;
+    color: var(--color-brass);
+}
+
+.section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-body);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--color-eucalyptus);
+    margin-bottom: 1.25rem;
+}
+
+.section-label::before {
+    content: '';
+    width: 28px;
+    height: 1px;
+    background: currentColor;
+}
+
+.section-label.is-light {
+    color: var(--color-brass-light);
+}
+
+.lead {
+    font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+    color: var(--color-text-soft);
+    max-width: 620px;
+}
+
+.price-display {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+section {
+    position: relative;
+}
+
+.section-pad {
+    padding: clamp(4.5rem, 10vw, 8rem) 0;
+}
+
+.section-head {
+    max-width: 760px;
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.section-head.is-center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.section-head.is-center .section-label::after {
+    content: '';
+    width: 28px;
+    height: 1px;
+    background: currentColor;
+}
+
+.section-head h2 {
+    margin-bottom: 1.25rem;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 1rem 1.9rem;
+    border-radius: var(--radius-pill);
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.btn svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-primary {
+    background: var(--color-brass);
+    color: var(--color-forest-ink);
+    box-shadow: 0 10px 30px rgba(184, 144, 90, 0.35);
+}
+
+.btn-primary:hover {
+    background: var(--color-brass-light);
+    box-shadow: 0 16px 40px rgba(184, 144, 90, 0.45);
+}
+
+.btn-wa {
+    background: var(--color-wa);
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+}
+
+.btn-wa:hover {
+    box-shadow: 0 16px 40px rgba(37, 211, 102, 0.45);
+}
+
+.btn-ghost {
+    border: 1px solid rgba(246, 241, 231, 0.45);
+    color: var(--color-text-inverse);
+    backdrop-filter: blur(8px);
+    background: rgba(246, 241, 231, 0.06);
+}
+
+.btn-ghost:hover {
+    background: rgba(246, 241, 231, 0.16);
+    border-color: var(--color-linen);
+}
+
+.btn-outline {
+    border: 1px solid var(--color-forest);
+    color: var(--color-forest);
+}
+
+.btn-outline:hover {
+    background: var(--color-forest);
+    color: var(--color-linen);
+}
+
+/* =========================================================
+   MEDIA SLOTS — real photo on top, atmospheric gradient below.
+   If the image file is missing, the gradient stays visible.
+   ========================================================= */
+.media {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(120% 90% at 20% 10%, rgba(216, 181, 127, 0.35), transparent 55%),
+        radial-gradient(90% 90% at 90% 90%, rgba(143, 174, 155, 0.55), transparent 60%),
+        linear-gradient(160deg, var(--color-eucalyptus), var(--color-forest-deep));
+}
+
+.media.tone-sky {
+    background:
+        radial-gradient(110% 80% at 70% 0%, rgba(246, 241, 231, 0.55), transparent 55%),
+        radial-gradient(90% 90% at 10% 100%, rgba(62, 107, 94, 0.8), transparent 65%),
+        linear-gradient(180deg, #A9C3B6, var(--color-eucalyptus));
+}
+
+.media.tone-warm {
+    background:
+        radial-gradient(100% 80% at 80% 20%, rgba(216, 181, 127, 0.7), transparent 60%),
+        radial-gradient(80% 80% at 10% 90%, rgba(184, 102, 74, 0.45), transparent 60%),
+        linear-gradient(150deg, var(--color-sand), #8A6A45);
+}
+
+.media.tone-night {
+    background:
+        radial-gradient(60% 50% at 70% 30%, rgba(216, 181, 127, 0.4), transparent 60%),
+        linear-gradient(170deg, #22403A, var(--color-forest-ink));
+}
+
+.media > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.media .media-caption {
+    position: absolute;
+    left: 1.1rem;
+    bottom: 1rem;
+    z-index: 2;
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(246, 241, 231, 0.85);
+}
+
+/* =========================================================
+   REVEAL ANIMATIONS
+   ========================================================= */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scrollPulse {
+    0%,
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 0.4;
+        transform: translateY(8px);
+    }
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes breathe {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.55;
+    }
+    50% {
+        transform: scale(1.08);
+        opacity: 0.85;
+    }
+}
+
+@keyframes kenBurns {
+    from {
+        transform: scale(1.08);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1.1s ease, transform 1.1s var(--ease-cinema);
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-delay-1 {
+    transition-delay: 0.12s;
+}
+
+.reveal-delay-2 {
+    transition-delay: 0.24s;
+}
+
+.reveal-delay-3 {
+    transition-delay: 0.36s;
+}
+
+.reveal-delay-4 {
+    transition-delay: 0.48s;
+}
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 900;
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+    transition: var(--transition);
+    color: var(--color-text-inverse);
+}
+
+.navbar.scrolled {
+    background: rgba(20, 40, 36, 0.92);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+    height: 66px;
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.brand-name {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+.brand-sub {
+    font-size: 0.56rem;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-top: 0.35rem;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links > li {
+    position: relative;
+}
+
+.nav-link {
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    opacity: 0.88;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.4rem 0;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: var(--color-brass-light);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s var(--ease-cinema);
+}
+
+.nav-link:hover {
+    opacity: 1;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-link .caret {
+    width: 10px;
+    height: 10px;
+    transition: transform 0.3s ease;
+}
+
+.dropdown.open .nav-link .caret {
+    transform: rotate(180deg);
+}
+
+/* Dropdown stays open until item clicked or trigger clicked again */
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 14px);
+    left: -1rem;
+    min-width: 230px;
+    list-style: none;
+    background: var(--color-linen);
+    color: var(--color-text);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lift);
+    padding: 0.6rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: var(--transition);
+}
+
+.dropdown.open .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.7rem 0.9rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.86rem;
+    transition: var(--transition);
+}
+
+.dropdown-menu a:hover {
+    background: var(--color-sage-mist);
+    color: var(--color-forest);
+    padding-left: 1.2rem;
+}
+
+.dropdown-menu small {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--color-text-soft);
+}
+
+.nav-cta {
+    padding: 0.7rem 1.3rem;
+    font-size: 0.78rem;
+}
+
+.nav-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.nav-toggle span {
+    width: 24px;
+    height: 1.5px;
+    background: currentColor;
+    transition: var(--transition);
+}
+
+.nav-toggle.active span:nth-child(1) {
+    transform: translateY(7.5px) rotate(45deg);
+}
+
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+    transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    align-items: flex-end;
+    color: var(--color-text-inverse);
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: -8% 0 0 0;
+    z-index: -2;
+    transform: translateY(calc(var(--scroll-y) * 0.35));
+}
+
+.hero-bg.media > img {
+    animation: kenBurns 14s ease-out forwards;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(180deg, rgba(14, 29, 26, 0.55) 0%, rgba(14, 29, 26, 0.05) 35%, rgba(14, 29, 26, 0.35) 60%, rgba(14, 29, 26, 0.9) 100%);
+}
+
+.hero-orb {
+    position: absolute;
+    width: 46vw;
+    height: 46vw;
+    max-width: 640px;
+    max-height: 640px;
+    top: 8%;
+    right: -10%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(216, 181, 127, 0.28), transparent 65%);
+    z-index: -1;
+    animation: breathe 9s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.hero-content {
+    width: 100%;
+    padding-bottom: clamp(3.5rem, 9vh, 6.5rem);
+    padding-top: calc(var(--nav-height) + 2rem);
+}
+
+.hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--color-brass-light);
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 1s ease-out both;
+}
+
+.hero-eyebrow .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-brass-light);
+    box-shadow: 0 0 0 6px rgba(216, 181, 127, 0.2);
+}
+
+.hero h1 {
+    max-width: 14ch;
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 1.2s 0.15s ease-out both;
+}
+
+.hero h1 em {
+    color: var(--color-brass-light);
+}
+
+.hero-sub {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    max-width: 540px;
+    opacity: 0.9;
+    margin-bottom: 2.2rem;
+    animation: fadeInUp 1.2s 0.3s ease-out both;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    animation: fadeInUp 1.2s 0.45s ease-out both;
+}
+
+.hero-meta {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: start;
+    gap: clamp(1.5rem, 4vw, 3.5rem);
+    margin-top: clamp(2.5rem, 6vh, 4rem);
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--color-line-inverse);
+    animation: fadeInUp 1.2s 0.6s ease-out both;
+}
+
+.hero-meta-item strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 2.6vw, 2.2rem);
+    font-weight: 300;
+    line-height: 1.1;
+}
+
+.hero-meta-item span {
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.scroll-indicator {
+    position: absolute;
+    right: clamp(1rem, 4vw, 2.5rem);
+    bottom: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.62rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    opacity: 0.75;
+}
+
+.scroll-indicator::after {
+    content: '';
+    width: 1px;
+    height: 48px;
+    background: var(--color-linen);
+    animation: scrollPulse 2.2s ease-in-out infinite;
+}
+
+/* =========================================================
+   URGENCY STRIP (MARQUEE)
+   ========================================================= */
+.urgency-strip {
+    background: var(--color-brass);
+    color: var(--color-forest-ink);
+    overflow: hidden;
+    padding: 0.95rem 0;
+    position: relative;
+    z-index: 2;
+}
+
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 38s linear infinite;
+}
+
+.urgency-strip:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+.marquee-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 2rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.marquee-item::after {
+    content: '✦';
+    font-size: 0.7rem;
+    opacity: 0.6;
+    margin-left: 2rem;
+}
+
+/* =========================================================
+   DESIRE HOOK
+   ========================================================= */
+.desire {
+    background: var(--color-linen);
+    overflow: hidden;
+}
+
+.desire-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: clamp(2.5rem, 6vw, 6rem);
+    align-items: center;
+}
+
+.desire-quote {
+    font-family: var(--font-display);
+    font-size: clamp(1.9rem, 3.8vw, 3.2rem);
+    font-weight: 300;
+    line-height: 1.22;
+    color: var(--color-forest);
+    margin-bottom: 2rem;
+}
+
+.desire-quote em {
+    color: var(--color-brass);
+}
+
+.desire-body p {
+    color: var(--color-text-soft);
+    margin-bottom: 1.1rem;
+    max-width: 540px;
+}
+
+.desire-signature {
+    margin-top: 2rem;
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.desire-signature div strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 2.6rem;
+    font-weight: 300;
+    color: var(--color-forest);
+    line-height: 1;
+}
+
+.desire-signature div span {
+    font-size: 0.74rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-text-soft);
+}
+
+.desire-visual {
+    position: relative;
+    aspect-ratio: 4 / 5;
+}
+
+.desire-visual .media {
+    position: absolute;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-deep);
+    transition: transform 0.6s var(--ease-card);
+}
+
+.desire-visual .media > img {
+    transition: transform 0.8s ease;
+}
+
+.desire-visual .media:hover > img {
+    transform: scale(1.06);
+}
+
+.desire-visual .media-main {
+    inset: 0 18% 12% 0;
+}
+
+.desire-visual .media-sub {
+    width: 52%;
+    aspect-ratio: 1 / 1;
+    right: 0;
+    bottom: 0;
+    border: 8px solid var(--color-linen);
+}
+
+.desire-visual .media:hover {
+    transform: translateY(-8px);
+}
+
+/* =========================================================
+   PROMO
+   ========================================================= */
+.promo {
+    background: var(--color-forest);
+    color: var(--color-text-inverse);
+    overflow: hidden;
+}
+
+.promo::before {
+    content: '';
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    left: -250px;
+    top: -250px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(143, 174, 155, 0.22), transparent 70%);
+    animation: breathe 11s ease-in-out infinite;
+}
+
+.promo .section-head h2 em {
+    color: var(--color-brass-light);
+}
+
+.promo .lead {
+    color: rgba(246, 241, 231, 0.75);
+}
+
+.promo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    position: relative;
+}
+
+.promo-card {
+    position: relative;
+    overflow: hidden;
+    padding: 2.4rem 2rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-line-inverse);
+    background: rgba(246, 241, 231, 0.04);
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+}
+
+.promo-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-brass), var(--color-brass-light));
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.promo-card:hover {
+    transform: translateY(-10px);
+    background: rgba(246, 241, 231, 0.1);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+}
+
+.promo-card:hover::before {
+    opacity: 1;
+}
+
+.promo-card.is-hero {
+    background: linear-gradient(160deg, rgba(184, 144, 90, 0.28), rgba(184, 144, 90, 0.06));
+    border-color: rgba(216, 181, 127, 0.45);
+}
+
+.promo-tag {
+    display: inline-block;
+    font-size: 0.64rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--radius-pill);
+    background: var(--color-brass);
+    color: var(--color-forest-ink);
+    margin-bottom: 1.6rem;
+}
+
+.promo-card .price-display {
+    color: var(--color-brass-light);
+    margin-bottom: 0.9rem;
+}
+
+.promo-card h3 {
+    margin-bottom: 0.8rem;
+}
+
+.promo-card p {
+    font-size: 0.94rem;
+    color: rgba(246, 241, 231, 0.75);
+}
+
+.promo-note {
+    margin-top: 2rem;
+    font-size: 0.78rem;
+    opacity: 0.6;
+    position: relative;
+}
+
+.promo-cta {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+}
+
+.countdown-note {
+    font-size: 0.84rem;
+    color: var(--color-brass-light);
+}
+
+/* =========================================================
+   UNIT TYPES
+   ========================================================= */
+.units {
+    background: var(--color-linen-warm);
+}
+
+.unit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+}
+
+.unit-card {
+    background: var(--color-linen);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.4s var(--ease-card);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.unit-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    z-index: 3;
+    background: linear-gradient(90deg, var(--color-brass), var(--color-brass-light));
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.unit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lift);
+}
+
+.unit-card:hover::before {
+    opacity: 1;
+}
+
+.unit-card .image-container {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+}
+
+.unit-card .image-container > img {
+    transition: transform 0.6s ease;
+}
+
+.unit-card:hover .image-container > img {
+    transform: scale(1.1);
+}
+
+.unit-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 2;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 0.4rem 0.75rem;
+    border-radius: var(--radius-pill);
+    background: rgba(246, 241, 231, 0.92);
+    color: var(--color-forest);
+}
+
+.unit-badge.is-brass {
+    background: var(--color-brass);
+    color: var(--color-forest-ink);
+}
+
+.unit-body {
+    padding: 1.8rem 1.7rem 2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.unit-body h3 {
+    color: var(--color-forest);
+    margin-bottom: 0.4rem;
+}
+
+.unit-size {
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-eucalyptus);
+    margin-bottom: 1rem;
+}
+
+.unit-body p {
+    font-size: 0.93rem;
+    color: var(--color-text-soft);
+    margin-bottom: 1.4rem;
+}
+
+.unit-specs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--color-line);
+    border-bottom: 1px solid var(--color-line);
+    margin-bottom: 1.4rem;
+}
+
+.unit-specs div {
+    text-align: center;
+}
+
+.unit-specs strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: var(--color-forest);
+}
+
+.unit-specs span {
+    font-size: 0.66rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-soft);
+}
+
+.unit-price {
+    margin-top: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.unit-price small {
+    display: block;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-text-soft);
+    margin-bottom: 0.3rem;
+}
+
+.unit-price .price-display {
+    font-size: clamp(1.6rem, 2.4vw, 2.1rem);
+    color: var(--color-forest);
+}
+
+.unit-link {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--color-forest);
+    color: var(--color-forest);
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.unit-link svg {
+    width: 18px;
+    height: 18px;
+}
+
+.unit-card:hover .unit-link {
+    background: var(--color-forest);
+    color: var(--color-linen);
+    transform: rotate(-45deg);
+}
+
+.units-footnote {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: var(--color-text-soft);
+    text-align: center;
+}
+
+/* =========================================================
+   SKY GARDEN / GREEN CONCEPT
+   ========================================================= */
+.sky {
+    background: var(--color-linen);
+}
+
+.sky-layout {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.sky-feature {
+    grid-column: span 7;
+    min-height: 560px;
+    border-radius: var(--radius-lg);
+    color: var(--color-text-inverse);
+    display: flex;
+    align-items: flex-end;
+    padding: clamp(1.75rem, 4vw, 3rem);
+}
+
+.sky-feature::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 35%, rgba(14, 29, 26, 0.85));
+    z-index: 1;
+}
+
+.sky-feature > img {
+    transition: transform 0.6s ease;
+}
+
+.sky-feature:hover > img {
+    transform: scale(1.05);
+}
+
+.sky-feature-text {
+    position: relative;
+    z-index: 2;
+    max-width: 480px;
+}
+
+.sky-feature-text h3 {
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 300;
+    margin-bottom: 0.8rem;
+}
+
+.sky-feature-text p {
+    opacity: 0.85;
+}
+
+.sky-side {
+    grid-column: span 5;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 1.5rem;
+}
+
+.sky-stat-card {
+    background: var(--color-sage-mist);
+    border-radius: var(--radius-lg);
+    padding: 2.2rem;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.sky-stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lift);
+}
+
+.sky-stat-card .big-number {
+    font-family: var(--font-display);
+    font-size: clamp(4rem, 8vw, 6.5rem);
+    font-weight: 300;
+    line-height: 0.9;
+    color: var(--color-forest);
+}
+
+.sky-stat-card .big-number sup {
+    font-size: 0.4em;
+    vertical-align: top;
+    color: var(--color-brass);
+}
+
+.sky-stat-card p {
+    color: var(--color-text-soft);
+    margin-top: 0.8rem;
+}
+
+.sky-side .media {
+    border-radius: var(--radius-lg);
+    min-height: 240px;
+}
+
+.sky-side .media > img {
+    transition: transform 0.6s ease;
+}
+
+.sky-side .media:hover > img {
+    transform: scale(1.05);
+}
+
+.sky-points {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 3.5rem;
+}
+
+.sky-point {
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--color-line);
+    transition: var(--transition);
+}
+
+.sky-point:hover {
+    border-color: var(--color-brass);
+    transform: translateY(-4px);
+}
+
+.sky-point .icon {
+    width: 42px;
+    height: 42px;
+    color: var(--color-eucalyptus);
+    margin-bottom: 1rem;
+}
+
+.sky-point h4 {
+    font-size: 1.2rem;
+    color: var(--color-forest);
+    margin-bottom: 0.4rem;
+}
+
+.sky-point p {
+    font-size: 0.9rem;
+    color: var(--color-text-soft);
+}
+
+/* =========================================================
+   DOG FRIENDLY
+   ========================================================= */
+.paws {
+    background: var(--color-linen-warm);
+    overflow: hidden;
+}
+
+.paws-grid {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: clamp(2.5rem, 6vw, 5rem);
+    align-items: center;
+}
+
+.paws-visual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    aspect-ratio: 1 / 1;
+}
+
+.paws-visual .media {
+    border-radius: var(--radius-md);
+    transition: all 0.4s var(--ease-card);
+}
+
+.paws-visual .media:first-child {
+    grid-row: span 2;
+}
+
+.paws-visual .media > img {
+    transition: transform 0.6s ease;
+}
+
+.paws-visual .media:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lift);
+}
+
+.paws-visual .media:hover > img {
+    transform: scale(1.1);
+}
+
+.paws-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 2rem 0 2.4rem;
+}
+
+.paws-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 1.1rem;
+    background: var(--color-linen);
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    font-size: 0.93rem;
+    color: var(--color-forest);
+    transition: var(--transition);
+}
+
+.paws-list li:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-soft);
+    background: #fff;
+}
+
+.paws-list li .paw {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--color-sage-mist);
+    color: var(--color-eucalyptus);
+}
+
+.paws-list li .paw svg {
+    width: 16px;
+    height: 16px;
+}
+
+.paws-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.55rem 1rem;
+    border-radius: var(--radius-pill);
+    background: var(--color-terracotta);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 1.4rem;
+}
+
+/* =========================================================
+   FACILITIES
+   ========================================================= */
+.facilities {
+    background: var(--color-forest-deep);
+    color: var(--color-text-inverse);
+}
+
+.facilities .lead {
+    color: rgba(246, 241, 231, 0.7);
+}
+
+.facility-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 260px;
+    gap: 1.25rem;
+}
+
+.facility-card {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: all 0.4s var(--ease-card);
+    cursor: pointer;
+}
+
+.facility-card.is-wide {
+    grid-column: span 2;
+}
+
+.facility-card.is-tall {
+    grid-row: span 2;
+}
+
+.facility-card.is-full {
+    grid-column: 1 / -1;
+}
+
+.facility-card .media {
+    position: absolute;
+    inset: 0;
+}
+
+.facility-card .media > img {
+    transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.facility-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(14, 29, 26, 0.88));
+    transition: var(--transition);
+}
+
+.facility-card:hover {
+    transform: scale(1.03) translateY(-6px);
+    box-shadow: var(--shadow-deep);
+    z-index: 2;
+}
+
+.facility-card:hover .media > img {
+    transform: scale(1.1);
+    filter: brightness(1.08);
+}
+
+.facility-label {
+    position: absolute;
+    left: 1.4rem;
+    right: 1.4rem;
+    bottom: 1.3rem;
+    z-index: 2;
+}
+
+.facility-label h4 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 0.2rem;
+}
+
+.facility-label p {
+    font-size: 0.82rem;
+    opacity: 0.75;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.facility-card:hover .facility-label p {
+    max-height: 80px;
+}
+
+/* =========================================================
+   LOCATION
+   ========================================================= */
+.location {
+    background: var(--color-forest);
+    color: var(--color-text-inverse);
+    overflow: hidden;
+}
+
+.location-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2.5rem, 6vw, 5rem);
+    align-items: start;
+}
+
+.location .lead {
+    color: rgba(246, 241, 231, 0.72);
+}
+
+.distance-list {
+    list-style: none;
+    margin-top: 2.5rem;
+}
+
+.distance-item {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 1.25rem;
+    align-items: baseline;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid var(--color-line-inverse);
+    transition: var(--transition);
+}
+
+.distance-item:hover {
+    padding-left: 0.8rem;
+    border-color: var(--color-brass);
+}
+
+.distance-item .time {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--color-brass-light);
+    line-height: 1;
+}
+
+.distance-item .time small {
+    font-family: var(--font-body);
+    font-size: 0.66rem;
+    letter-spacing: 0.1em;
+    margin-left: 0.2rem;
+    opacity: 0.8;
+}
+
+.distance-item h4 {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.distance-item p {
+    font-size: 0.84rem;
+    opacity: 0.65;
+}
+
+.map-wrap {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+    box-shadow: var(--shadow-deep);
+    position: relative;
+    background: var(--color-forest-deep);
+}
+
+.map-wrap iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    filter: grayscale(0.35) contrast(1.05) sepia(0.12);
+}
+
+.map-address {
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    background: rgba(20, 40, 36, 0.92);
+    backdrop-filter: blur(10px);
+    padding: 1rem 1.2rem;
+    border-radius: var(--radius-md);
+    font-size: 0.84rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.map-address a {
+    color: var(--color-brass-light);
+    font-weight: 600;
+    white-space: nowrap;
+    transition: var(--transition);
+}
+
+.map-address a:hover {
+    color: var(--color-linen);
+}
+
+/* =========================================================
+   GALLERY
+   ========================================================= */
+.gallery {
+    background: var(--color-linen);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 220px;
+    gap: 1rem;
+}
+
+.gallery-item {
+    border-radius: var(--radius-md);
+    cursor: zoom-in;
+    transition: all 0.4s var(--ease-card);
+}
+
+.gallery-item:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.gallery-item:nth-child(6) {
+    grid-column: span 2;
+}
+
+.gallery-item:nth-child(9) {
+    grid-row: span 2;
+}
+
+.gallery-item > img {
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lift);
+}
+
+.gallery-item:hover > img {
+    transform: scale(1.1);
+    filter: brightness(1.08);
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1200;
+    background: rgba(14, 29, 26, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+}
+
+.lightbox.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-stage {
+    width: min(1100px, 100%);
+    aspect-ratio: 16 / 10;
+    max-height: 80vh;
+    border-radius: var(--radius-md);
+    transform: scale(0.94);
+    transition: transform 0.5s var(--ease-cinema);
+}
+
+.lightbox.open .lightbox-stage {
+    transform: scale(1);
+}
+
+.lightbox-stage > img {
+    object-fit: contain;
+    background: var(--color-forest-ink);
+}
+
+.lightbox-close,
+.lightbox-nav {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: var(--color-linen);
+    border: 1px solid var(--color-line-inverse);
+    transition: var(--transition);
+    font-size: 1.3rem;
+}
+
+.lightbox-close:hover,
+.lightbox-nav:hover {
+    background: var(--color-brass);
+    color: var(--color-forest-ink);
+    border-color: var(--color-brass);
+    transform: scale(1.08);
+}
+
+.lightbox-close {
+    top: 1.2rem;
+    right: 1.2rem;
+}
+
+.lightbox-prev {
+    left: 1.2rem;
+    top: 50%;
+    margin-top: -26px;
+}
+
+.lightbox-next {
+    right: 1.2rem;
+    top: 50%;
+    margin-top: -26px;
+}
+
+.lightbox-counter {
+    position: absolute;
+    bottom: 1.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--color-linen);
+    font-size: 0.78rem;
+    letter-spacing: 0.2em;
+    opacity: 0.7;
+}
+
+/* =========================================================
+   PROOF / SCARCITY
+   ========================================================= */
+.proof {
+    background: var(--color-linen-warm);
+}
+
+.proof-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.proof-stat {
+    background: var(--color-linen);
+    padding: 2.2rem 1.6rem;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.proof-stat::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-brass), var(--color-brass-light));
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.proof-stat:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lift);
+}
+
+.proof-stat:hover::before {
+    opacity: 1;
+}
+
+.proof-stat strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: clamp(2.6rem, 4.5vw, 3.8rem);
+    font-weight: 300;
+    color: var(--color-forest);
+    line-height: 1;
+    margin-bottom: 0.6rem;
+}
+
+.proof-stat span {
+    font-size: 0.8rem;
+    color: var(--color-text-soft);
+}
+
+.trust-row {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3rem;
+    align-items: center;
+    background: var(--color-forest);
+    color: var(--color-text-inverse);
+    border-radius: var(--radius-lg);
+    padding: clamp(2rem, 5vw, 3.5rem);
+    position: relative;
+    overflow: hidden;
+}
+
+.trust-row::after {
+    content: '';
+    position: absolute;
+    right: -120px;
+    bottom: -120px;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(216, 181, 127, 0.25), transparent 70%);
+}
+
+.trust-row h3 {
+    font-size: clamp(1.6rem, 2.8vw, 2.3rem);
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.trust-row p {
+    opacity: 0.78;
+}
+
+.trust-partners {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.partner {
+    border: 1px solid var(--color-line-inverse);
+    border-radius: var(--radius-md);
+    padding: 1.2rem 0.8rem;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.partner:hover {
+    background: rgba(246, 241, 231, 0.08);
+    transform: translateY(-6px);
+}
+
+.partner strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+}
+
+.partner span {
+    font-size: 0.66rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.6;
+}
+
+/* =========================================================
+   COST OF WAITING (loss aversion)
+   ========================================================= */
+.waiting {
+    background: var(--color-linen);
+}
+
+.compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.compare-card {
+    border-radius: var(--radius-lg);
+    padding: clamp(1.75rem, 4vw, 2.75rem);
+    border: 1px solid var(--color-line);
+    transition: var(--transition);
+}
+
+.compare-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lift);
+}
+
+.compare-card.is-now {
+    background: var(--color-forest);
+    color: var(--color-text-inverse);
+    border-color: transparent;
+}
+
+.compare-card h3 {
+    margin-bottom: 1.5rem;
+}
+
+.compare-card ul {
+    list-style: none;
+}
+
+.compare-card li {
+    display: flex;
+    gap: 0.8rem;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--color-line);
+    font-size: 0.95rem;
+}
+
+.compare-card.is-now li {
+    border-color: var(--color-line-inverse);
+}
+
+.compare-card li:last-child {
+    border-bottom: none;
+}
+
+.compare-card .mark {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 0.72rem;
+    margin-top: 0.15rem;
+}
+
+.compare-card.is-later .mark {
+    background: rgba(184, 102, 74, 0.14);
+    color: var(--color-terracotta);
+}
+
+.compare-card.is-now .mark {
+    background: var(--color-brass);
+    color: var(--color-forest-ink);
+}
+
+/* =========================================================
+   FAQ
+   ========================================================= */
+.faq {
+    background: var(--color-linen-warm);
+}
+
+.faq-layout {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: clamp(2rem, 6vw, 5rem);
+    align-items: start;
+}
+
+.faq-list {
+    border-top: 1px solid var(--color-line);
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--color-line);
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    text-align: left;
+    font-family: var(--font-display);
+    font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+    color: var(--color-forest);
+    transition: var(--transition);
+}
+
+.faq-question:hover {
+    color: var(--color-brass);
+    padding-left: 0.5rem;
+}
+
+.faq-icon {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 1px solid var(--color-line);
+    position: relative;
+    transition: var(--transition);
+}
+
+.faq-icon::before,
+.faq-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 1.5px;
+    background: currentColor;
+    transform: translate(-50%, -50%);
+    transition: var(--transition);
+}
+
+.faq-icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.faq-item.open .faq-icon {
+    background: var(--color-forest);
+    color: var(--color-linen);
+    border-color: var(--color-forest);
+}
+
+.faq-item.open .faq-icon::after {
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s var(--ease-cinema);
+}
+
+.faq-answer p {
+    padding: 0 3rem 1.6rem 0;
+    color: var(--color-text-soft);
+}
+
+/* =========================================================
+   CTA / CONTACT
+   ========================================================= */
+.contact {
+    background: var(--color-forest-ink);
+    color: var(--color-text-inverse);
+    overflow: hidden;
+}
+
+.contact-bg {
+    position: absolute;
+    inset: 0;
+    opacity: 0.28;
+}
+
+.contact::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, var(--color-forest-ink) 30%, rgba(14, 29, 26, 0.6));
+}
+
+.contact .container {
+    position: relative;
+    z-index: 2;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2.5rem, 6vw, 5rem);
+    align-items: center;
+}
+
+.contact h2 em {
+    color: var(--color-brass-light);
+}
+
+.contact .lead {
+    color: rgba(246, 241, 231, 0.72);
+    margin-bottom: 2.2rem;
+}
+
+.contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.6rem;
+}
+
+.contact-phone {
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 3vw, 2.3rem);
+    font-weight: 300;
+    color: var(--color-brass-light);
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.contact-phone:hover {
+    color: var(--color-linen);
+    transform: translateX(6px);
+}
+
+.contact-form {
+    background: rgba(246, 241, 231, 0.05);
+    border: 1px solid var(--color-line-inverse);
+    backdrop-filter: blur(14px);
+    border-radius: var(--radius-lg);
+    padding: clamp(1.75rem, 4vw, 2.75rem);
+}
+
+.contact-form h3 {
+    margin-bottom: 0.4rem;
+}
+
+.contact-form > p {
+    font-size: 0.86rem;
+    opacity: 0.65;
+    margin-bottom: 1.6rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-field {
+    margin-bottom: 1rem;
+}
+
+.form-field label {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 0.45rem;
+}
+
+.form-field input,
+.form-field select {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-line-inverse);
+    background: rgba(246, 241, 231, 0.06);
+    color: var(--color-linen);
+    font: inherit;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.form-field select option {
+    color: var(--color-text);
+}
+
+.form-field input:focus,
+.form-field select:focus {
+    outline: none;
+    border-color: var(--color-brass-light);
+    background: rgba(246, 241, 231, 0.1);
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 0.88rem;
+    margin: 0.4rem 0 1.4rem;
+    cursor: pointer;
+}
+
+.form-check input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--color-brass);
+}
+
+.contact-form .btn {
+    width: 100%;
+}
+
+.form-privacy {
+    margin-top: 1rem;
+    font-size: 0.72rem;
+    opacity: 0.5;
+    text-align: center;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.footer {
+    background: var(--color-forest-ink);
+    color: rgba(246, 241, 231, 0.7);
+    padding: 4rem 0 2.5rem;
+    border-top: 1px solid var(--color-line-inverse);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.footer .brand {
+    color: var(--color-linen);
+    margin-bottom: 1rem;
+}
+
+.footer p {
+    font-size: 0.88rem;
+}
+
+.footer h5 {
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-brass-light);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer li {
+    margin-bottom: 0.55rem;
+    font-size: 0.88rem;
+}
+
+.footer li a {
+    transition: var(--transition);
+}
+
+.footer li a:hover {
+    color: var(--color-linen);
+    padding-left: 4px;
+}
+
+.footer-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-line-inverse);
+}
+
+.copyright {
+    font-size: 0.78rem;
+    margin-bottom: 1.2rem;
+}
+
+.disclaimer {
+    font-size: 0.65rem;
+    opacity: 0.35;
+    line-height: 1.6;
+}
+
+/* =========================================================
+   FLOATING BUTTONS
+   ========================================================= */
+.wa-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: var(--color-wa);
+    display: grid;
+    place-items: center;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+    z-index: 999;
+    transition: var(--transition);
+}
+
+.wa-float::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: var(--color-wa);
+    z-index: -1;
+    animation: breathe 2.6s ease-in-out infinite;
+}
+
+.wa-float:hover {
+    transform: translateY(-3px) scale(1.06);
+    box-shadow: 0 10px 28px rgba(37, 211, 102, 0.55);
+}
+
+.wa-float svg {
+    width: 30px;
+    height: 30px;
+}
+
+.wa-tooltip {
+    position: absolute;
+    right: calc(100% + 12px);
+    top: 50%;
+    transform: translateY(-50%) translateX(8px);
+    background: var(--color-linen);
+    color: var(--color-forest);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.55rem 0.9rem;
+    border-radius: var(--radius-pill);
+    white-space: nowrap;
+    box-shadow: var(--shadow-soft);
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition);
+}
+
+.wa-float:hover .wa-tooltip {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
+.back-top {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--color-forest);
+    color: var(--color-linen);
+    font-size: 1.2rem;
+    display: grid;
+    place-items: center;
+    box-shadow: var(--shadow-soft);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: var(--transition);
+}
+
+.back-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-top:hover {
+    background: var(--color-brass);
+    color: var(--color-forest-ink);
+    transform: translateY(-3px);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 1080px) {
+    .facility-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sky-points {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .proof-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 960px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: min(340px, 86vw);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+        padding: calc(var(--nav-height) + 1rem) 1.75rem 2rem;
+        background: var(--color-forest-deep);
+        transform: translateX(100%);
+        transition: transform 0.5s var(--ease-cinema);
+        overflow-y: auto;
+    }
+
+    .nav-links.open {
+        transform: translateX(0);
+        box-shadow: -20px 0 60px rgba(0, 0, 0, 0.35);
+    }
+
+    .nav-links > li {
+        width: 100%;
+    }
+
+    .nav-link {
+        font-size: 1.05rem;
+        padding: 0.8rem 0;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .dropdown-menu {
+        position: static;
+        background: rgba(246, 241, 231, 0.06);
+        color: var(--color-linen);
+        box-shadow: none;
+        max-height: 0;
+        padding: 0 0.4rem;
+        overflow: hidden;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+
+    .dropdown.open .dropdown-menu {
+        max-height: 420px;
+        padding: 0.4rem;
+    }
+
+    .dropdown-menu a:hover {
+        background: rgba(246, 241, 231, 0.1);
+        color: var(--color-linen);
+    }
+
+    .dropdown-menu small {
+        color: rgba(246, 241, 231, 0.55);
+    }
+
+    .nav-cta-item {
+        margin-top: 1rem;
+    }
+
+    .nav-toggle {
+        display: flex;
+        position: relative;
+        z-index: 2;
+    }
+
+    .desire-grid,
+    .paws-grid,
+    .location-grid,
+    .faq-layout,
+    .contact-grid,
+    .trust-row {
+        grid-template-columns: 1fr;
+    }
+
+    .unit-grid,
+    .promo-grid {
+        grid-template-columns: 1fr;
+        max-width: 560px;
+        margin: 0 auto;
+    }
+
+    .sky-feature,
+    .sky-side {
+        grid-column: span 12;
+    }
+
+    .sky-feature {
+        min-height: 440px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 180px;
+    }
+
+    .gallery-item:nth-child(9) {
+        grid-row: span 1;
+    }
+
+    .compare {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-grid > div:first-child {
+        grid-column: span 2;
+    }
+
+    .map-wrap {
+        aspect-ratio: 1 / 1;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-meta {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+
+    .hero-actions .btn {
+        flex: 1 1 100%;
+    }
+
+    .facility-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 220px;
+    }
+
+    .facility-card.is-wide {
+        grid-column: span 1;
+    }
+
+    .facility-card.is-tall {
+        grid-row: span 1;
+    }
+
+    .facility-label p {
+        max-height: 80px;
+    }
+
+    .sky-points,
+    .paws-list,
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .proof-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .trust-partners {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid > div:first-child {
+        grid-column: span 1;
+    }
+
+    .faq-answer p {
+        padding-right: 0;
+    }
+
+    .map-address {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .brand-name {
+        font-size: 1.3rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     NAVBAR
+     ===================================================== -->
+<header class="navbar" id="navbar">
+    <div class="container">
+        <a href="#top" class="brand" aria-label="Aerium Residence">
+            <span class="brand-name">Aerium</span>
+            <span class="brand-sub">Taman Permata Buana</span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#promo" class="nav-link">Promo</a></li>
+            <li class="dropdown">
+                <button class="nav-link dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+                    Tipe Unit
+                    <svg class="caret" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 3l4 4 4-4"/></svg>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#unit-2br-compact">2 Bedroom D <small>± 84 m² · mulai Rp 3 M</small></a></li>
+                    <li><a href="#unit-2br">2 Bedroom A / B <small>± 98–99 m²</small></a></li>
+                    <li><a href="#unit-3br">3 Bedroom <small>± 144–166 m²</small></a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <button class="nav-link dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+                    Lifestyle
+                    <svg class="caret" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 3l4 4 4-4"/></svg>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#sky-garden">Sky Garden &amp; 75% Hijau</a></li>
+                    <li><a href="#dog-friendly">Dog-Friendly Living</a></li>
+                    <li><a href="#fasilitas">Fasilitas</a></li>
+                    <li><a href="#galeri">Galeri</a></li>
+                </ul>
+            </li>
+            <li><a href="#lokasi" class="nav-link">Lokasi</a></li>
+            <li><a href="#faq" class="nav-link">FAQ</a></li>
+            <li class="nav-cta-item">
+                <a href="#" class="btn btn-primary nav-cta js-wa" data-wa-context="jadwal private viewing">Private Viewing</a>
+            </li>
+        </ul>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Buka menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</header>
+
+<main id="top">
+
+<!-- =====================================================
+     [1] HERO
+     ===================================================== -->
+<section class="hero" id="hero">
+    <div class="hero-bg media tone-sky">
+        <img src="images/hero.jpg" alt="Aerium Residence, Taman Permata Buana" onerror="this.remove()">
+    </div>
+    <div class="hero-orb" aria-hidden="true"></div>
+
+    <div class="container hero-content">
+        <div class="hero-eyebrow"><span class="dot"></span>Sinar Mas Land · Jakarta Barat</div>
+
+        <h1>Pulang ke tempat Anda bisa <em>bernapas</em> lagi.</h1>
+
+        <p class="hero-sub">
+            75% lahannya hijau. Taman di langit setiap 4 lantai.
+            Di tengah Taman Permata Buana — kawasan yang sudah jadi selama puluhan tahun.
+        </p>
+
+        <div class="hero-actions">
+            <a href="#" class="btn btn-wa js-wa" data-wa-context="promo Tanpa DP">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Tanya Promo Tanpa DP
+            </a>
+            <a href="#units" class="btn btn-ghost">Lihat Tipe Unit</a>
+        </div>
+
+        <div class="hero-meta">
+            <div class="hero-meta-item"><strong>Rp 3 M</strong><span>Mulai dari</span></div>
+            <div class="hero-meta-item"><strong>0%</strong><span>DP · Promo</span></div>
+            <div class="hero-meta-item"><strong>75%</strong><span>Area Hijau</span></div>
+            <div class="hero-meta-item"><strong>1,8 Ha</strong><span>Lahan</span></div>
+        </div>
+    </div>
+
+    <div class="scroll-indicator" aria-hidden="true">Scroll</div>
+</section>
+
+<!-- =====================================================
+     [2] URGENCY STRIP
+     ===================================================== -->
+<div class="urgency-strip" aria-label="Highlight">
+    <div class="marquee-track">
+        <span class="marquee-item">Promo Free DP / Tanpa DP</span>
+        <span class="marquee-item">Selected Unit Full Furnished</span>
+        <span class="marquee-item">South Tower · 12 Unit per Lantai</span>
+        <span class="marquee-item">Apartemen Dog-Friendly Pertama di Jakarta</span>
+        <span class="marquee-item">Sky Garden Setiap 4 Lantai</span>
+        <span class="marquee-item">Sinar Mas Land × Itochu × Shimizu</span>
+        <!-- duplicate for seamless loop -->
+        <span class="marquee-item">Promo Free DP / Tanpa DP</span>
+        <span class="marquee-item">Selected Unit Full Furnished</span>
+        <span class="marquee-item">South Tower · 12 Unit per Lantai</span>
+        <span class="marquee-item">Apartemen Dog-Friendly Pertama di Jakarta</span>
+        <span class="marquee-item">Sky Garden Setiap 4 Lantai</span>
+        <span class="marquee-item">Sinar Mas Land × Itochu × Shimizu</span>
+    </div>
+</div>
+
+<!-- =====================================================
+     [3] DESIRE HOOK
+     ===================================================== -->
+<section class="desire section-pad" id="konsep">
+    <div class="container desire-grid">
+        <div class="desire-body">
+            <span class="section-label reveal">Bayangkan</span>
+            <p class="desire-quote reveal reveal-delay-1">
+                Pagi Sabtu. Pintu balkon Anda terbuka, udaranya <em>masih dingin</em>.
+                Anjing Anda sudah menunggu di depan pintu — dog park di bawah sana juga miliknya.
+            </p>
+            <p class="reveal reveal-delay-2">
+                Jakarta biasanya meminta Anda memilih: tinggal di tengah kota, atau tinggal di tempat yang tenang.
+                Aerium tidak meminta Anda memilih.
+            </p>
+            <p class="reveal reveal-delay-2">
+                Tiga perempat lahannya dibiarkan hijau. Koridornya semi-terbuka, jadi angin dan cahaya masuk sampai ke depan pintu unit Anda.
+                Dan setiap empat lantai, ada taman di ketinggian — tempat Anda membaca, menelepon keluarga, atau sekadar diam sebentar.
+            </p>
+            <div class="desire-signature reveal reveal-delay-3">
+                <div><strong data-count="75">0</strong><span>% area hijau</span></div>
+                <div><strong data-count="4">0</strong><span>lantai sekali, sky garden</span></div>
+                <div><strong data-count="4">0</strong><span>lapis keamanan</span></div>
+            </div>
+        </div>
+
+        <div class="desire-visual reveal reveal-delay-2">
+            <div class="media media-main tone-sky">
+                <img src="images/living.jpg" alt="Ruang tamu unit Aerium" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="media media-sub tone-warm">
+                <img src="images/balcony.jpg" alt="Balkon unit Aerium" loading="lazy" onerror="this.remove()">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     PROMO
+     ===================================================== -->
+<section class="promo section-pad" id="promo">
+    <div class="container">
+        <div class="section-head">
+            <span class="section-label is-light reveal">Promo Terbatas</span>
+            <h2 class="reveal reveal-delay-1">Pindah ke Aerium <em>tanpa menyiapkan DP.</em></h2>
+            <p class="lead reveal reveal-delay-2">
+                Biasanya, yang membuat orang menunda beli apartemen bukan cicilannya, tapi DP 20–30% di awal.
+                Untuk periode ini, hambatan itu dihapus.
+            </p>
+        </div>
+
+        <div class="promo-grid">
+            <article class="promo-card is-hero reveal">
+                <span class="promo-tag">Promo Utama</span>
+                <div class="price-display">Rp 0</div>
+                <h3>Free DP / Tanpa DP</h3>
+                <p>
+                    Uang yang tadinya habis untuk DP tetap di rekening Anda — untuk renovasi, investasi lain, atau dana darurat keluarga.
+                </p>
+            </article>
+
+            <article class="promo-card reveal reveal-delay-1">
+                <span class="promo-tag">Selected Unit</span>
+                <div class="price-display">Full Furnished</div>
+                <h3>Tinggal bawa koper</h3>
+                <p>
+                    Unit pilihan sudah terisi furnitur. Tidak ada 3 bulan urus tukang, tidak ada biaya interior tambahan ratusan juta. Serah kunci, langsung tinggal — atau langsung disewakan.
+                </p>
+            </article>
+
+            <article class="promo-card reveal reveal-delay-2">
+                <span class="promo-tag">Harga</span>
+                <div class="price-display">Rp 3 – 6 M</div>
+                <h3>2BR &amp; 3BR, South Tower</h3>
+                <p>
+                    Harga mulai ± Rp 3 Miliar untuk 2 Bedroom. Bayar cash, cash bertahap, atau KPR — tim kami bantu simulasikan yang paling ringan untuk Anda.
+                </p>
+            </article>
+        </div>
+
+        <div class="promo-cta reveal">
+            <a href="#" class="btn btn-primary js-wa" data-wa-context="daftar unit Full Furnished yang masih tersedia">
+                Minta Daftar Unit Full Furnished
+            </a>
+            <span class="countdown-note">Jumlah unit full furnished terbatas — begitu terpilih, tidak ditambah.</span>
+        </div>
+
+        <p class="promo-note">*Syarat &amp; ketentuan berlaku. Promo dapat berubah sewaktu-waktu tanpa pemberitahuan. Hubungi kami untuk konfirmasi ketersediaan terbaru.</p>
+    </div>
+</section>
+
+<!-- =====================================================
+     [4] PRODUCT — UNIT TYPES
+     ===================================================== -->
+<section class="units section-pad" id="units">
+    <div class="container">
+        <div class="section-head is-center">
+            <span class="section-label reveal">Tipe Unit · South Tower</span>
+            <h2 class="reveal reveal-delay-1">Ruang yang <em>cukup</em> untuk semua orang di rumah.</h2>
+            <p class="lead reveal reveal-delay-2" style="margin: 0 auto;">
+                Bukan studio yang terasa seperti kamar hotel. Setiap unit Aerium adalah rumah dengan kamar tidur sungguhan, dapur sungguhan, dan ruang untuk bertumbuh.
+            </p>
+        </div>
+
+        <div class="unit-grid">
+            <!-- 2BR D -->
+            <article class="unit-card reveal" id="unit-2br-compact">
+                <span class="unit-badge is-brass">Entry · Paling Diminati</span>
+                <div class="image-container media tone-sky">
+                    <img src="images/unit-2br-d.jpg" alt="Unit 2 Bedroom D" loading="lazy" onerror="this.remove()">
+                </div>
+                <div class="unit-body">
+                    <h3>2 Bedroom D</h3>
+                    <div class="unit-size">± 84,13 m² · Semi Gross</div>
+                    <p>Untuk pasangan muda atau yang pertama kali membeli di Jakarta Barat. Kamar kedua Anda bisa jadi ruang kerja, kamar anak, atau kamar tamu orang tua.</p>
+                    <div class="unit-specs">
+                        <div><strong>2</strong><span>Kamar</span></div>
+                        <div><strong>2</strong><span>K. Mandi</span></div>
+                        <div><strong>84</strong><span>m²</span></div>
+                    </div>
+                    <div class="unit-price">
+                        <div>
+                            <small>Mulai dari</small>
+                            <span class="price-display">Rp 3 M-an</span>
+                        </div>
+                        <a href="#" class="unit-link js-wa" data-wa-context="unit 2 Bedroom D (± 84 m²)" aria-label="Tanya unit 2 Bedroom D">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 2BR A/B -->
+            <article class="unit-card reveal reveal-delay-1" id="unit-2br">
+                <span class="unit-badge">Lebih Lapang</span>
+                <div class="image-container media">
+                    <img src="images/unit-2br-a.jpg" alt="Unit 2 Bedroom A / B" loading="lazy" onerror="this.remove()">
+                </div>
+                <div class="unit-body">
+                    <h3>2 Bedroom A / B</h3>
+                    <div class="unit-size">± 98,01 – 99,12 m² · Semi Gross</div>
+                    <p>Hampir 100 m² — lebih luas dari banyak rumah tapak di Jakarta. Ruang tamu Anda cukup untuk kumpul keluarga di hari Minggu tanpa terasa sempit.</p>
+                    <div class="unit-specs">
+                        <div><strong>2</strong><span>Kamar</span></div>
+                        <div><strong>2</strong><span>K. Mandi</span></div>
+                        <div><strong>99</strong><span>m²</span></div>
+                    </div>
+                    <div class="unit-price">
+                        <div>
+                            <small>Harga</small>
+                            <span class="price-display">Hubungi Kami</span>
+                        </div>
+                        <a href="#" class="unit-link js-wa" data-wa-context="unit 2 Bedroom A / B (± 98–99 m²)" aria-label="Tanya unit 2 Bedroom A / B">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 3BR -->
+            <article class="unit-card reveal reveal-delay-2" id="unit-3br">
+                <span class="unit-badge">Keluarga Besar</span>
+                <div class="image-container media tone-warm">
+                    <img src="images/unit-3br.jpg" alt="Unit 3 Bedroom" loading="lazy" onerror="this.remove()">
+                </div>
+                <div class="unit-body">
+                    <h3>3 Bedroom</h3>
+                    <div class="unit-size">± 144 – 165,58 m² · Semi Gross</div>
+                    <p>Setiap anak punya kamarnya sendiri. Anda punya kamar utama yang benar-benar tenang. Dan masih ada ruang untuk makan malam bersama tanpa ada yang harus mengalah.</p>
+                    <div class="unit-specs">
+                        <div><strong>3</strong><span>Kamar</span></div>
+                        <div><strong>3</strong><span>K. Mandi</span></div>
+                        <div><strong>144+</strong><span>m²</span></div>
+                    </div>
+                    <div class="unit-price">
+                        <div>
+                            <small>Mulai dari</small>
+                            <span class="price-display">Rp 5,3 M-an</span>
+                        </div>
+                        <a href="#" class="unit-link js-wa" data-wa-context="unit 3 Bedroom (± 144–166 m²)" aria-label="Tanya unit 3 Bedroom">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <p class="units-footnote">Luas &amp; harga bersifat indikatif dan dapat berubah. Minta pricelist resmi terbaru via WhatsApp.</p>
+    </div>
+</section>
+
+<!-- =====================================================
+     SKY GARDEN / GREEN CONCEPT
+     ===================================================== -->
+<section class="sky section-pad" id="sky-garden">
+    <div class="container">
+        <div class="section-head">
+            <span class="section-label reveal">Aerium · dari kata "Air"</span>
+            <h2 class="reveal reveal-delay-1">Dirancang agar <em>udara</em> yang jadi fasilitas utamanya.</h2>
+            <p class="lead reveal reveal-delay-2">
+                Kebanyakan apartemen menjual jumlah lantai. Aerium menjual sesuatu yang lebih langka di Jakarta: ruang terbuka, angin, dan hijau yang bisa Anda lihat dari mana pun.
+            </p>
+        </div>
+
+        <div class="sky-layout">
+            <div class="sky-feature media tone-sky reveal">
+                <img src="images/sky-garden.jpg" alt="Sky Garden Aerium" loading="lazy" onerror="this.remove()">
+                <div class="sky-feature-text">
+                    <span class="section-label is-light">Sky Garden</span>
+                    <h3>Taman di ketinggian, setiap empat lantai.</h3>
+                    <p>Anda tidak perlu turun ke lobi untuk menyentuh rumput. Taman Anda ada beberapa langkah dari lift.</p>
+                </div>
+            </div>
+
+            <div class="sky-side">
+                <div class="sky-stat-card reveal reveal-delay-1">
+                    <div class="big-number"><span data-count="75">0</span><sup>%</sup></div>
+                    <p>dari total lahan 1,8 hektar dialokasikan untuk area hijau &amp; fasilitas outdoor.</p>
+                </div>
+                <div class="media tone-warm reveal reveal-delay-2">
+                    <img src="images/landscape.jpg" alt="Lanskap hijau Aerium" loading="lazy" onerror="this.remove()">
+                    <span class="media-caption">Landscape</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="sky-points">
+            <div class="sky-point reveal">
+                <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M8 30c6-2 10-8 16-8s10 6 16 8M8 38c6-2 10-8 16-8s10 6 16 8M24 22V8M18 12l6-4 6 4"/></svg>
+                <h4>Koridor Semi-Terbuka</h4>
+                <p>Angin dan cahaya alami sampai ke depan pintu unit Anda — bukan lorong gelap ber-AC.</p>
+            </div>
+            <div class="sky-point reveal reveal-delay-1">
+                <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="10" y="8" width="28" height="32" rx="3"/><path d="M18 18h12M18 24h12M18 30h7"/><circle cx="34" cy="34" r="6"/></svg>
+                <h4>Smart Home Automation</h4>
+                <p>Perangkat di unit bisa diatur otomatis. Pulang kerja, rumah sudah siap menyambut.</p>
+            </div>
+            <div class="sky-point reveal reveal-delay-2">
+                <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M24 6l14 6v10c0 9-6 16-14 20-8-4-14-11-14-20V12l14-6z"/><path d="M18 24l4 4 8-8"/></svg>
+                <h4>4 Lapis Keamanan</h4>
+                <p>Anak main di taman, Anda tetap tenang. Sistem keamanan berlapis dari gerbang sampai pintu unit.</p>
+            </div>
+            <div class="sky-point reveal reveal-delay-3">
+                <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M24 40V20M24 20c0-7 6-12 14-12 0 8-6 12-14 12zM24 26c0-6-5-10-12-10 0 7 5 10 12 10z"/></svg>
+                <h4>Standar Jepang</h4>
+                <p>Dikembangkan Sinar Mas Land bersama Itochu &amp; Shimizu — perhatian pada detail yang terasa setiap hari.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     DOG FRIENDLY
+     ===================================================== -->
+<section class="paws section-pad" id="dog-friendly">
+    <div class="container paws-grid">
+        <div class="paws-visual reveal">
+            <div class="media tone-warm">
+                <img src="images/dog-park.jpg" alt="Dog park Aerium" loading="lazy" onerror="this.remove()">
+                <span class="media-caption">Dog Park</span>
+            </div>
+            <div class="media tone-sky">
+                <img src="images/dog-pool.jpg" alt="Dog pool Aerium" loading="lazy" onerror="this.remove()">
+                <span class="media-caption">Dog Pool</span>
+            </div>
+            <div class="media">
+                <img src="images/dog-hotel.jpg" alt="Dog hotel Aerium" loading="lazy" onerror="this.remove()">
+                <span class="media-caption">Dog Hotel</span>
+            </div>
+        </div>
+
+        <div>
+            <span class="paws-badge reveal">Pertama di Jakarta</span>
+            <span class="section-label reveal">Dog-Friendly Living</span>
+            <h2 class="reveal reveal-delay-1">Anjing Anda <em>juga pulang</em> ke rumah.</h2>
+            <p class="lead reveal reveal-delay-2">
+                Banyak pemilik anjing di Jakarta akhirnya tidak jadi pindah ke apartemen — karena anggota keluarga berkaki empat itu tidak diterima.
+                Di Aerium, mereka bukan sekadar diizinkan. Mereka punya fasilitasnya sendiri.
+            </p>
+
+            <ul class="paws-list">
+                <li class="reveal"><span class="paw"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="6" cy="9" r="2.2"/><circle cx="10" cy="5" r="2.2"/><circle cx="14" cy="5" r="2.2"/><circle cx="18" cy="9" r="2.2"/><path d="M12 11c-3 0-6 4-6 6.5 0 2 2 2.5 3 2.5s2-.7 3-.7 2 .7 3 .7 3-.5 3-2.5c0-2.5-3-6.5-6-6.5z"/></svg></span>Dog Park</li>
+                <li class="reveal reveal-delay-1"><span class="paw"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="6" cy="9" r="2.2"/><circle cx="10" cy="5" r="2.2"/><circle cx="14" cy="5" r="2.2"/><circle cx="18" cy="9" r="2.2"/><path d="M12 11c-3 0-6 4-6 6.5 0 2 2 2.5 3 2.5s2-.7 3-.7 2 .7 3 .7 3-.5 3-2.5c0-2.5-3-6.5-6-6.5z"/></svg></span>Dog Pool</li>
+                <li class="reveal"><span class="paw"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="6" cy="9" r="2.2"/><circle cx="10" cy="5" r="2.2"/><circle cx="14" cy="5" r="2.2"/><circle cx="18" cy="9" r="2.2"/><path d="M12 11c-3 0-6 4-6 6.5 0 2 2 2.5 3 2.5s2-.7 3-.7 2 .7 3 .7 3-.5 3-2.5c0-2.5-3-6.5-6-6.5z"/></svg></span>Dog Hotel (Social Dog)</li>
+                <li class="reveal reveal-delay-1"><span class="paw"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="6" cy="9" r="2.2"/><circle cx="10" cy="5" r="2.2"/><circle cx="14" cy="5" r="2.2"/><circle cx="18" cy="9" r="2.2"/><path d="M12 11c-3 0-6 4-6 6.5 0 2 2 2.5 3 2.5s2-.7 3-.7 2 .7 3 .7 3-.5 3-2.5c0-2.5-3-6.5-6-6.5z"/></svg></span>Pet Salon</li>
+                <li class="reveal"><span class="paw"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="6" cy="9" r="2.2"/><circle cx="10" cy="5" r="2.2"/><circle cx="14" cy="5" r="2.2"/><circle cx="18" cy="9" r="2.2"/><path d="M12 11c-3 0-6 4-6 6.5 0 2 2 2.5 3 2.5s2-.7 3-.7 2 .7 3 .7 3-.5 3-2.5c0-2.5-3-6.5-6-6.5z"/></svg></span>Dog Café</li>
+                <li class="reveal reveal-delay-1"><span class="paw"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="6" cy="9" r="2.2"/><circle cx="10" cy="5" r="2.2"/><circle cx="14" cy="5" r="2.2"/><circle cx="18" cy="9" r="2.2"/><path d="M12 11c-3 0-6 4-6 6.5 0 2 2 2.5 3 2.5s2-.7 3-.7 2 .7 3 .7 3-.5 3-2.5c0-2.5-3-6.5-6-6.5z"/></svg></span>Hidup Bersama di Apartemen</li>
+            </ul>
+
+            <a href="#" class="btn btn-outline js-wa reveal" data-wa-context="aturan & fasilitas dog-friendly">Tanya Aturan Hewan Peliharaan</a>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     FACILITIES
+     ===================================================== -->
+<section class="facilities section-pad" id="fasilitas">
+    <div class="container">
+        <div class="section-head">
+            <span class="section-label is-light reveal">Fasilitas</span>
+            <h2 class="reveal reveal-delay-1">Hari libur Anda <em>tidak perlu keluar gerbang.</em></h2>
+            <p class="lead reveal reveal-delay-2">
+                Berenang pagi, olahraga sore, makan malam di alfresco, meeting mendadak — semuanya di bawah satu atap.
+            </p>
+        </div>
+
+        <div class="facility-grid">
+            <div class="facility-card is-wide is-tall reveal">
+                <div class="media tone-sky">
+                    <img src="images/pool-outdoor.jpg" alt="Kolam renang outdoor" loading="lazy" onerror="this.remove()">
+                </div>
+                <div class="facility-label">
+                    <h4>Outdoor Swimming Pool</h4>
+                    <p>Berenang di bawah langit terbuka, dikelilingi hijau — bukan tembok.</p>
+                </div>
+            </div>
+            <div class="facility-card reveal reveal-delay-1">
+                <div class="media tone-night">
+                    <img src="images/pool-indoor.jpg" alt="Kolam renang indoor" loading="lazy" onerror="this.remove()">
+                </div>
+                <div class="facility-label">
+                    <h4>Indoor Pool</h4>
+                    <p>Hujan deras? Rutinitas berenang Anda tetap jalan.</p>
+                </div>
+            </div>
+            <div class="facility-card reveal reveal-delay-2">
+                <div class="media">
+                    <img src="images/gym.jpg" alt="Gym eksklusif" loading="lazy" onerror="this.remove()">
+                </div>
+                <div class="facility-label">
+                    <h4>Exclusive Gym</h4>
+                    <p>Tanpa antre alat, tanpa iuran membership bulanan.</p>
+                </div>
+            </div>
+            <div class="facility-card reveal">
+                <div class="media tone-warm">
+                    <img src="images/lounge.jpg" alt="Exclusive lounge" loading="lazy" onerror="this.remove()">
+                </div>
+                <div class="facility-label">
+                    <h4>Exclusive Lounge</h4>
+                    <p>Terima tamu dengan kesan yang pantas.</p>
+                </div>
+            </div>
+            <div class="facility-card reveal reveal-delay-1">
+                <div class="media tone-warm">
+                    <img src="images/alfresco.jpg" alt="Alfresco dining" loading="lazy" onerror="this.remove()">
+                </div>
+                <div class="facility-label">
+                    <h4>Alfresco Dining</h4>
+                    <p>Makan malam di udara terbuka, tanpa perlu reservasi restoran.</p>
+                </div>
+            </div>
+            <div class="facility-card is-full reveal reveal-delay-2">
+                <div class="media tone-night">
+                    <img src="images/meeting.jpg" alt="Meeting room" loading="lazy" onerror="this.remove()">
+                </div>
+                <div class="facility-label">
+                    <h4>Meeting Room</h4>
+                    <p>Kerja dari rumah tanpa klien melihat cucian di belakang Anda.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     [5] LOCATION POWER
+     ===================================================== -->
+<section class="location section-pad" id="lokasi">
+    <div class="container location-grid">
+        <div>
+            <span class="section-label is-light reveal">Lokasi</span>
+            <h2 class="reveal reveal-delay-1">Kawasan yang <em>sudah jadi</em>, bukan yang masih dijanjikan.</h2>
+            <p class="lead reveal reveal-delay-2">
+                Taman Permata Buana sudah dihuni puluhan tahun. Rumah sakit, sekolah, mall, dan tol sudah ada hari ini — Anda tidak membeli harapan, Anda membeli kenyataan.
+            </p>
+
+            <ul class="distance-list">
+                <li class="distance-item reveal">
+                    <span class="time">9<small>mnt</small></span>
+                    <div><h4>RS Pondok Indah – Puri Indah</h4><p>Rumah sakit rujukan, dekat saat paling dibutuhkan.</p></div>
+                </li>
+                <li class="distance-item reveal reveal-delay-1">
+                    <span class="time">11<small>mnt</small></span>
+                    <div><h4>Puri Indah Mall &amp; Lippo Mall Puri</h4><p>Belanja, kuliner, bioskop — akhir pekan tanpa macet panjang.</p></div>
+                </li>
+                <li class="distance-item reveal reveal-delay-2">
+                    <span class="time">Dekat</span>
+                    <div><h4>Tol JORR 2 &amp; Tol Jakarta–Merak</h4><p>Akses cepat ke pusat kota, Tangerang, dan BSD.</p></div>
+                </li>
+                <li class="distance-item reveal reveal-delay-3">
+                    <span class="time">30<small>mnt</small></span>
+                    <div><h4>Bandara Soekarno-Hatta</h4><p>Perjalanan bisnis &amp; liburan keluarga lebih ringan.</p></div>
+                </li>
+                <li class="distance-item reveal reveal-delay-4">
+                    <span class="time">Dekat</span>
+                    <div><h4>Sekolah Nasional &amp; Internasional</h4><p>Antar-jemput anak tanpa harus berangkat subuh.</p></div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="map-wrap reveal reveal-delay-2">
+            <iframe
+                title="Peta lokasi Aerium Residence"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=Aerium+Residence+Taman+Permata+Buana+Jakarta+Barat&output=embed">
+            </iframe>
+            <div class="map-address">
+                <span>Jl. Pulau Melintang A No. 20, Kembangan Utara, Jakarta Barat 11610</span>
+                <a href="https://maps.google.com/?q=Aerium+Residence+Taman+Permata+Buana" target="_blank" rel="noopener">Buka Maps →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     [6] GALLERY
+     ===================================================== -->
+<section class="gallery section-pad" id="galeri">
+    <div class="container">
+        <div class="section-head is-center">
+            <span class="section-label reveal">Galeri</span>
+            <h2 class="reveal reveal-delay-1">Lihat dulu. <em>Rasakan</em> sendiri.</h2>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+            <div class="gallery-item media tone-sky reveal" data-src="images/gallery-01.jpg"><img src="images/gallery-01.jpg" alt="Galeri Aerium 1" loading="lazy" onerror="this.remove()"></div>
+            <div class="gallery-item media reveal reveal-delay-1" data-src="images/gallery-02.jpg"><img src="images/gallery-02.jpg" alt="Galeri Aerium 2" loading="lazy" onerror="this.remove()"></div>
+            <div class="gallery-item media tone-warm reveal reveal-delay-2" data-src="images/gallery-03.jpg"><img src="images/gallery-03.jpg" alt="Galeri Aerium 3" loading="lazy" onerror="this.remove()"></div>
+            <div class="gallery-item media tone-night reveal" data-src="images/gallery-04.jpg"><img src="images/gallery-04.jpg" alt="Galeri Aerium 4" loading="lazy" onerror="this.remove()"></div>
+            <div class="gallery-item media tone-sky reveal reveal-delay-1" data-src="images/gallery-05.jpg"><img src="images/gallery-05.jpg" alt="Galeri Aerium 5" loading="lazy" onerror="this.remove()"></div>
+            <div class="gallery-item media tone-warm reveal reveal-delay-2" data-src="images/gallery-06.jpg"><img src="images/gallery-06.jpg" alt="Galeri Aerium 6" loading="lazy" onerror="this.remove()"></div>
+            <div class="gallery-item media reveal" data-src="images/gallery-07.jpg"><img src="images/gallery-07.jpg" alt="Galeri Aerium 7" loading="lazy" onerror="this.remove()"></div>
+            <div class="gallery-item media tone-night reveal reveal-delay-1" data-src="images/gallery-08.jpg"><img src="images/gallery-08.jpg" alt="Galeri Aerium 8" loading="lazy" onerror="this.remove()"></div>
+            <div class="gallery-item media tone-sky reveal reveal-delay-2" data-src="images/gallery-09.jpg"><img src="images/gallery-09.jpg" alt="Galeri Aerium 9" loading="lazy" onerror="this.remove()"></div>
+            <div class="gallery-item media tone-warm reveal" data-src="images/gallery-10.jpg"><img src="images/gallery-10.jpg" alt="Galeri Aerium 10" loading="lazy" onerror="this.remove()"></div>
+            <div class="gallery-item media reveal reveal-delay-1" data-src="images/gallery-11.jpg"><img src="images/gallery-11.jpg" alt="Galeri Aerium 11" loading="lazy" onerror="this.remove()"></div>
+        </div>
+    </div>
+</section>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galeri foto">
+    <button class="lightbox-close" id="lbClose" aria-label="Tutup">✕</button>
+    <button class="lightbox-nav lightbox-prev" id="lbPrev" aria-label="Sebelumnya">←</button>
+    <div class="lightbox-stage media" id="lbStage"></div>
+    <button class="lightbox-nav lightbox-next" id="lbNext" aria-label="Berikutnya">→</button>
+    <div class="lightbox-counter" id="lbCounter">1 / 11</div>
+</div>
+
+<!-- =====================================================
+     [7] SCARCITY / PROOF
+     ===================================================== -->
+<section class="proof section-pad" id="bukti">
+    <div class="container">
+        <div class="section-head is-center">
+            <span class="section-label reveal">Angka yang Tidak Bisa Ditambah</span>
+            <h2 class="reveal reveal-delay-1">Hanya <em>366 unit</em> di South Tower.</h2>
+            <p class="lead reveal reveal-delay-2" style="margin: 0 auto;">
+                12 unit per lantai. Setelah terjual, satu-satunya cara masuk Aerium adalah membeli dari pemilik lain — dengan harga pemilik lain.
+            </p>
+        </div>
+
+        <div class="proof-grid">
+            <div class="proof-stat reveal"><strong data-count="366">0</strong><span>Unit total South Tower</span></div>
+            <div class="proof-stat reveal reveal-delay-1"><strong data-count="12">0</strong><span>Unit per lantai — privasi terjaga</span></div>
+            <div class="proof-stat reveal reveal-delay-2"><strong><span data-count="1.8" data-decimals="1">0</span> Ha</strong><span>Lahan di kawasan established</span></div>
+            <div class="proof-stat reveal reveal-delay-3"><strong><span data-count="75">0</span>%</strong><span>Area hijau &amp; outdoor</span></div>
+        </div>
+
+        <div class="trust-row reveal">
+            <div>
+                <span class="section-label is-light">Dibangun oleh</span>
+                <h3>Satu nama Indonesia, dua nama Jepang.</h3>
+                <p>
+                    Aerium dikembangkan Sinar Mas Land — pengembang BSD City — bersama Itochu Corporation dan Shimizu Corporation dari Jepang.
+                    Anda tidak menebak-nebak apakah proyek ini akan selesai dengan baik.
+                </p>
+            </div>
+            <div class="trust-partners">
+                <div class="partner"><strong>Sinar Mas Land</strong><span>Developer</span></div>
+                <div class="partner"><strong>Itochu</strong><span>Jepang</span></div>
+                <div class="partner"><strong>Shimizu</strong><span>Jepang</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     COST OF WAITING
+     ===================================================== -->
+<section class="waiting section-pad">
+    <div class="container">
+        <div class="section-head is-center">
+            <span class="section-label reveal">Dua Pilihan</span>
+            <h2 class="reveal reveal-delay-1">Harga hari ini <em>tidak akan menunggu</em> Anda.</h2>
+        </div>
+
+        <div class="compare">
+            <div class="compare-card is-later reveal">
+                <h3>Jika menunggu tahun depan</h3>
+                <ul>
+                    <li><span class="mark">✕</span>Promo Tanpa DP kemungkinan sudah berakhir — Anda siapkan DP ratusan juta.</li>
+                    <li><span class="mark">✕</span>Unit full furnished sudah dipilih orang lain lebih dulu.</li>
+                    <li><span class="mark">✕</span>Lantai &amp; arah view terbaik sudah terisi.</li>
+                    <li><span class="mark">✕</span>Satu tahun lagi bayar sewa yang tidak pernah jadi milik Anda.</li>
+                </ul>
+            </div>
+            <div class="compare-card is-now reveal reveal-delay-1">
+                <h3>Jika memilih sekarang</h3>
+                <ul>
+                    <li><span class="mark">✓</span>Masuk tanpa DP — dana Anda tetap utuh.</li>
+                    <li><span class="mark">✓</span>Kesempatan unit full furnished, langsung tinggal atau disewakan.</li>
+                    <li><span class="mark">✓</span>Pilihan lantai, arah, dan tipe masih lengkap.</li>
+                    <li><span class="mark">✓</span>Harga dikunci di level hari ini.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     [8] FAQ
+     ===================================================== -->
+<section class="faq section-pad" id="faq">
+    <div class="container faq-layout">
+        <div>
+            <span class="section-label reveal">FAQ</span>
+            <h2 class="reveal reveal-delay-1">Pertanyaan yang <em>biasanya</em> ditanyakan.</h2>
+            <p class="lead reveal reveal-delay-2">Tidak menemukan jawabannya? Tanya langsung — dibalas manusia, bukan bot.</p>
+            <a href="#" class="btn btn-wa js-wa reveal" data-wa-context="pertanyaan seputar Aerium" style="margin-top: 1.8rem;">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Chat 0819 888 089
+            </a>
+        </div>
+
+        <div class="faq-list">
+            <div class="faq-item reveal">
+                <button class="faq-question">Benarkah bisa tanpa DP?<span class="faq-icon"></span></button>
+                <div class="faq-answer"><p>Ya, saat ini tersedia promo Free DP / Tanpa DP untuk unit tertentu dengan syarat &amp; ketentuan dari developer. Karena promo bisa berubah, hubungi kami untuk konfirmasi skema dan unit yang masih berlaku hari ini.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <button class="faq-question">Unit mana yang full furnished?<span class="faq-icon"></span></button>
+                <div class="faq-answer"><p>Full furnished berlaku untuk selected unit — jumlahnya terbatas dan tidak ditambah. Kirim pesan WhatsApp untuk mendapat daftar unit, lantai, dan foto furnitur yang masih tersedia.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <button class="faq-question">Berapa kisaran harganya?<span class="faq-icon"></span></button>
+                <div class="faq-answer"><p>Mulai ± Rp 3 Miliar untuk 2 Bedroom hingga ± Rp 6 Miliar untuk 3 Bedroom, tergantung tipe, lantai, dan arah hadap. Minta pricelist resmi terbaru via WhatsApp.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <button class="faq-question">Cara pembayaran apa saja yang tersedia?<span class="faq-icon"></span></button>
+                <div class="faq-answer"><p>Tersedia cash keras, cash bertahap, dan KPR/KPA dengan bank rekanan. Kami bisa buatkan simulasi cicilan sesuai budget bulanan Anda.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <button class="faq-question">Apakah semua ras anjing diperbolehkan?<span class="faq-icon"></span></button>
+                <div class="faq-answer"><p>Aerium adalah apartemen dog-friendly dengan dog park, dog pool, dog hotel, pet salon, dan dog café. Ketentuan ukuran/ras mengikuti tata tertib pengelola — tanyakan detailnya ke kami sebelum memilih unit.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <button class="faq-question">Siapa developernya?<span class="faq-icon"></span></button>
+                <div class="faq-answer"><p>Sinar Mas Land, bekerja sama dengan dua perusahaan Jepang: Itochu Corporation dan Shimizu Corporation.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <button class="faq-question">Bisa jadwalkan kunjungan show unit?<span class="faq-icon"></span></button>
+                <div class="faq-answer"><p>Bisa. Pilih hari dan jam lewat formulir di bawah atau WhatsApp langsung — kami siapkan private viewing supaya Anda tidak perlu antre.</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     [9] CTA / CONTACT
+     ===================================================== -->
+<section class="contact section-pad" id="kontak">
+    <div class="contact-bg media tone-night">
+        <img src="images/night.jpg" alt="" loading="lazy" onerror="this.remove()">
+    </div>
+    <div class="container contact-grid">
+        <div>
+            <span class="section-label is-light reveal">Private Viewing</span>
+            <h2 class="reveal reveal-delay-1">Datang, berdiri di balkonnya, <em>lalu putuskan.</em></h2>
+            <p class="lead reveal reveal-delay-2">
+                Foto tidak bisa menangkap anginnya. Jadwalkan 45 menit untuk melihat sendiri — tanpa kewajiban membeli.
+            </p>
+            <div class="contact-actions reveal reveal-delay-3">
+                <a href="#" class="btn btn-wa js-wa" data-wa-context="jadwal private viewing">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    WhatsApp Sekarang
+                </a>
+            </div>
+            <a href="tel:+62819888089" class="contact-phone reveal reveal-delay-4">0819 888 089</a>
+        </div>
+
+        <form class="contact-form reveal reveal-delay-2" id="leadForm" novalidate>
+            <h3>Kirim pricelist &amp; promo ke saya</h3>
+            <p>Data Anda langsung terkirim sebagai pesan WhatsApp ke konsultan kami.</p>
+
+            <div class="form-row">
+                <div class="form-field">
+                    <label for="fName">Nama</label>
+                    <input type="text" id="fName" name="name" placeholder="Nama Anda" required>
+                </div>
+                <div class="form-field">
+                    <label for="fPhone">No. WhatsApp</label>
+                    <input type="tel" id="fPhone" name="phone" placeholder="08xx" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-field">
+                    <label for="fType">Tipe Diminati</label>
+                    <select id="fType" name="type">
+                        <option>2 Bedroom D (± 84 m²)</option>
+                        <option>2 Bedroom A / B (± 98–99 m²)</option>
+                        <option>3 Bedroom (± 144–166 m²)</option>
+                        <option>Belum tahu, minta rekomendasi</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="fPay">Rencana Pembayaran</label>
+                    <select id="fPay" name="payment">
+                        <option>Promo Tanpa DP</option>
+                        <option>KPR / KPA</option>
+                        <option>Cash Bertahap</option>
+                        <option>Cash Keras</option>
+                    </select>
+                </div>
+            </div>
+
+            <label class="form-check">
+                <input type="checkbox" id="fViewing" checked>
+                Saya ingin jadwalkan Private Viewing
+            </label>
+            <label class="form-check">
+                <input type="checkbox" id="fFurnish" checked>
+                Kirimkan daftar unit Full Furnished
+            </label>
+
+            <button type="submit" class="btn btn-primary">Kirim via WhatsApp →</button>
+            <p class="form-privacy">Data Anda tidak dibagikan ke pihak lain.</p>
+        </form>
+    </div>
+</section>
+
+</main>
+
+<!-- =====================================================
+     [10] FOOTER
+     ===================================================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <a href="#top" class="brand">
+                    <span class="brand-name">Aerium</span>
+                    <span class="brand-sub">Taman Permata Buana</span>
+                </a>
+                <p>Jl. Pulau Melintang A No. 20, Kembangan Utara,<br>Jakarta Barat 11610</p>
+            </div>
+            <div>
+                <h5>Jelajahi</h5>
+                <ul>
+                    <li><a href="#promo">Promo Tanpa DP</a></li>
+                    <li><a href="#units">Tipe Unit</a></li>
+                    <li><a href="#sky-garden">Sky Garden</a></li>
+                    <li><a href="#dog-friendly">Dog-Friendly</a></li>
+                    <li><a href="#lokasi">Lokasi</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Hubungi</h5>
+                <ul>
+                    <li><a href="#" class="js-wa" data-wa-context="informasi Aerium">WhatsApp 0819 888 089</a></li>
+                    <li><a href="tel:+62819888089">Telepon 0819 888 089</a></li>
+                    <li><a href="#kontak">Jadwalkan Private Viewing</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">© <span id="year">2026</span> Aerium Residence Marketing · PT. Berjaya Global Makmur</p>
+            <p class="disclaimer">Important Notice &amp; Disclaimer: While every reasonable care has been taken in preparing these materials and their contents, the developer(s) and UTTA cannot be held responsible for any inaccuracies or omissions. This material was created based on promotions available at the time of publication. Promotions are subject to change without prior notice. All statements are believed to be correct but shall not be regarded as statements or representations of fact. This website, its contents and all plans, information, specifications, renderings, illustrations, photographs, physical displays, show unit(s), representations and statements shall not form part of any contract. This is not the official website of the developer. It is built and managed by PT. Berjaya Global Makmur as part of a cooperation with the developer.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Floating WhatsApp (bottom right) -->
+<a href="#" class="wa-float js-wa" data-wa-context="promo Tanpa DP & unit Full Furnished" aria-label="Chat WhatsApp">
+    <span class="wa-tooltip">Tanya promo Tanpa DP</span>
+    <svg viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- Back to top (bottom left) -->
+<button class="back-top" id="backTop" aria-label="Kembali ke atas">↑</button>
+
+<script>
+(function () {
+    'use strict';
+
+    /* ---------- Config ---------- */
+    var WA_NUMBER = '62819888089'; // 0819 888 089
+    var PROPERTY = 'Aerium Residence';
+
+    function waLink(context) {
+        var msg = 'Halo, saya tertarik dengan ' + PROPERTY + '. Mohon info ' + (context || 'promo terbaru') + '.';
+        return 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg);
+    }
+
+    /* ---------- WhatsApp links with pre-filled context ---------- */
+    document.querySelectorAll('.js-wa').forEach(function (el) {
+        el.setAttribute('href', waLink(el.getAttribute('data-wa-context')));
+        el.setAttribute('target', '_blank');
+        el.setAttribute('rel', 'noopener');
+    });
+
+    /* ---------- Navbar scroll state + parallax + back-to-top ---------- */
+    var navbar = document.getElementById('navbar');
+    var backTop = document.getElementById('backTop');
+    var ticking = false;
+
+    function onScroll() {
+        var y = window.scrollY;
+        navbar.classList.toggle('scrolled', y > 60);
+        backTop.classList.toggle('show', y > 400);
+        if (y < window.innerHeight * 1.2) {
+            document.documentElement.style.setProperty('--scroll-y', y + 'px');
+        }
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', function () {
+        if (!ticking) {
+            window.requestAnimationFrame(onScroll);
+            ticking = true;
+        }
+    }, { passive: true });
+    onScroll();
+
+    backTop.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    /* ---------- Mobile nav ---------- */
+    var navToggle = document.getElementById('navToggle');
+    var navLinks = document.getElementById('navLinks');
+
+    navToggle.addEventListener('click', function () {
+        var open = navLinks.classList.toggle('open');
+        navToggle.classList.toggle('active', open);
+        navToggle.setAttribute('aria-label', open ? 'Tutup menu' : 'Buka menu');
+    });
+
+    /* ---------- Dropdown: opens on click, stays open until
+       an item is clicked or the trigger is clicked again ---------- */
+    document.querySelectorAll('.dropdown').forEach(function (dd) {
+        var trigger = dd.querySelector('.dropdown-trigger');
+        trigger.addEventListener('click', function (e) {
+            e.preventDefault();
+            var willOpen = !dd.classList.contains('open');
+            document.querySelectorAll('.dropdown.open').forEach(function (other) {
+                if (other !== dd) {
+                    other.classList.remove('open');
+                    other.querySelector('.dropdown-trigger').setAttribute('aria-expanded', 'false');
+                }
+            });
+            dd.classList.toggle('open', willOpen);
+            trigger.setAttribute('aria-expanded', String(willOpen));
+        });
+        dd.querySelectorAll('.dropdown-menu a').forEach(function (a) {
+            a.addEventListener('click', function () {
+                dd.classList.remove('open');
+                trigger.setAttribute('aria-expanded', 'false');
+            });
+        });
+    });
+
+    /* Close mobile menu after any non-dropdown link click */
+    navLinks.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+            navLinks.classList.remove('open');
+            navToggle.classList.remove('active');
+        });
+    });
+
+    /* ---------- Scroll reveal ---------- */
+    var revealObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+            if (e.isIntersecting) {
+                e.target.classList.add('visible');
+                revealObserver.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(function (el) {
+        revealObserver.observe(el);
+    });
+
+    /* ---------- Counters ---------- */
+    function animateCount(el) {
+        var target = parseFloat(el.getAttribute('data-count'));
+        var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        var duration = 1600;
+        var start = null;
+
+        function step(ts) {
+            if (!start) start = ts;
+            var p = Math.min((ts - start) / duration, 1);
+            var eased = 1 - Math.pow(1 - p, 3);
+            var val = target * eased;
+            el.textContent = decimals ? val.toFixed(decimals).replace('.', ',') : Math.round(val).toLocaleString('id-ID');
+            if (p < 1) window.requestAnimationFrame(step);
+        }
+        window.requestAnimationFrame(step);
+    }
+
+    var countObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+            if (e.isIntersecting) {
+                animateCount(e.target);
+                countObserver.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('[data-count]').forEach(function (el) {
+        countObserver.observe(el);
+    });
+
+    /* ---------- FAQ accordion ---------- */
+    document.querySelectorAll('.faq-item').forEach(function (item) {
+        var btn = item.querySelector('.faq-question');
+        var answer = item.querySelector('.faq-answer');
+        btn.addEventListener('click', function () {
+            var open = item.classList.toggle('open');
+            answer.style.maxHeight = open ? answer.scrollHeight + 'px' : '0px';
+        });
+    });
+
+    /* ---------- Gallery lightbox ---------- */
+    var items = Array.prototype.slice.call(document.querySelectorAll('.gallery-item'));
+    var lightbox = document.getElementById('lightbox');
+    var stage = document.getElementById('lbStage');
+    var counter = document.getElementById('lbCounter');
+    var current = 0;
+
+    function show(i) {
+        current = (i + items.length) % items.length;
+        var src = items[current].getAttribute('data-src');
+        stage.innerHTML = '';
+        var img = document.createElement('img');
+        img.src = src;
+        img.alt = 'Galeri Aerium ' + (current + 1);
+        img.onerror = function () { img.remove(); };
+        stage.appendChild(img);
+        counter.textContent = (current + 1) + ' / ' + items.length;
+    }
+
+    function openLb(i) {
+        show(i);
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLb() {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    items.forEach(function (item, i) {
+        item.addEventListener('click', function () { openLb(i); });
+    });
+    document.getElementById('lbClose').addEventListener('click', closeLb);
+    document.getElementById('lbPrev').addEventListener('click', function () { show(current - 1); });
+    document.getElementById('lbNext').addEventListener('click', function () { show(current + 1); });
+    lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) closeLb();
+    });
+    document.addEventListener('keydown', function (e) {
+        if (!lightbox.classList.contains('open')) return;
+        if (e.key === 'Escape') closeLb();
+        if (e.key === 'ArrowLeft') show(current - 1);
+        if (e.key === 'ArrowRight') show(current + 1);
+    });
+
+    /* ---------- Lead form -> WhatsApp ---------- */
+    document.getElementById('leadForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        var name = document.getElementById('fName').value.trim();
+        var phone = document.getElementById('fPhone').value.trim();
+        if (!name || !phone) {
+            (name ? document.getElementById('fPhone') : document.getElementById('fName')).focus();
+            return;
+        }
+        var lines = [
+            'Halo, saya ' + name + ' (' + phone + ').',
+            'Saya tertarik dengan ' + PROPERTY + '.',
+            'Tipe: ' + document.getElementById('fType').value,
+            'Pembayaran: ' + document.getElementById('fPay').value
+        ];
+        if (document.getElementById('fViewing').checked) lines.push('Saya ingin jadwalkan Private Viewing.');
+        if (document.getElementById('fFurnish').checked) lines.push('Mohon kirimkan daftar unit Full Furnished.');
+        window.open('https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(lines.join('\n')), '_blank', 'noopener');
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
