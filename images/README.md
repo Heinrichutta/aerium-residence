@@ -1,10 +1,11 @@
 # Aerium images
 
 - `images/*.JPG / *.HEIC`: original photos (4–11 MB each, not loaded by the page).
-- `images/web/<name>.jpg`: web version, max 2000 px (130–430 KB).
-- `images/web/<name>-sm.jpg`: small version, max 900 px (35–105 KB), used on phones and in cards.
+- `images/web/<name>.webp`: web version, max 1600 px, WebP quality 82.
+- `images/web/<name>-sm.webp`: small version, max 800 px, used on phones and in cards.
+- `images/og-aerium-residence.jpg`: 1200x630 social share image.
 
-Converted with EXIF rotation applied; the HEIC file was converted to JPG (browsers can't show HEIC).
+Converted with EXIF rotation applied; the HEIC file was converted to WebP (browsers can't show HEIC).
 To add a photo: put the original here, create both web sizes, and reference them in `index.html`.
 
 ## Where each photo is used

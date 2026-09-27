@@ -1,0 +1,34 @@
+# Aerium Residence
+
+> Aerium Residence adalah apartemen siap huni (selesai ± 2020) di Taman Permata Buana, Kembangan, Jakarta Barat 11610, dikembangkan Sinar Mas Land bersama Itochu Corporation dan Shimizu Corporation. Harga mulai Rp 3.010.741.800 (2 Bedroom ± 84 m²) hingga ± Rp 6 Miliar (3 Bedroom), promo Free DP / Tanpa DP, selected unit full furnished. Kontak marketing: WhatsApp +62 819 888 089 (Berjaya Properties — PT Berjaya Global Makmur). Terakhir diperbarui: 27 September 2026.
+
+Situs ini adalah situs marketing (bukan situs resmi developer) yang dikelola PT Berjaya Global Makmur dalam kerja sama dengan developer. Harga dan promo indikatif dan dapat berubah.
+
+## Fakta utama
+
+- Developer: Sinar Mas Land × Itochu × Shimizu (Jepang)
+- Alamat: Jl. Pulau Melintang A No. 20, Taman Permata Buana, Kembangan Utara, Jakarta Barat 11610
+- Lahan: 1,8 hektar, ± 75% area hijau & outdoor
+- South Tower: 366 unit, 12 unit per lantai
+- Tipe: 2 Bedroom D ± 84,13 m² · 2 Bedroom A/B ± 98,01–99,12 m² · 3 Bedroom ± 144–165,58 m² (semi gross)
+- Harga: 2BR D mulai Rp 3.010.741.800 (± Rp 35,8 juta/m²) · 3BR ± 144 m² Rp 5.306.896.500 (± Rp 36,9 juta/m²)
+- Promo: Free DP / Tanpa DP; selected unit full furnished (terbatas)
+- Sewa pasar (listing publik): ± Rp 110–220 juta/tahun; estimasi gross yield ± 3,7–4,6%
+- Dog-friendly pertama di Jakarta: dog park, dog café, dog pool, dog hotel (Social Dog), pet salon
+- Fasilitas: kolam renang outdoor, kolam renang indoor dengan Sky Garden di sampingnya, kids pool, children playground, gym, sauna, grand lobby, library & meeting room, smart home automation, 4 lapis keamanan
+- Jarak: RS Pondok Indah – Puri Indah ± 9 menit; Puri Indah Mall & Puri Indah Mall 2 ± 11 menit; dekat Tol JORR 2 & Tol Jakarta–Merak; Bandara Soekarno-Hatta ± 30 menit
+- Sekolah sekitar: Raffles International Christian School (kampus di dalam Taman Permata Buana), Global Sevilla ± 5 menit, Kinderworld Montessori ± 6 menit, Notre Dame ± 8 menit
+
+## Halaman
+
+- [Aerium Residence — harga, tipe unit, promo Tanpa DP](https://aerium-residence.co/): halaman utama, tabel harga, fasilitas, lokasi, FAQ
+- [Apartemen dekat Puri Indah Mall 2](https://aerium-residence.co/apartemen-dekat-puri-indah-mall/): tenant Puri Indah Mall 2 (Tiong Bahru Bakery, ZUS Coffee, UNION, HiGeorge!, SMARA), perbandingan Aerium vs St. Moritz vs The Windsor
+- [Apartemen dog-friendly di Jakarta](https://aerium-residence.co/apartemen-dog-friendly-jakarta/): fasilitas hewan peliharaan Aerium dan checklist memilih apartemen pet-friendly
+
+## Kontak
+
+- [WhatsApp marketing Aerium: +62 819 888 089](https://wa.me/62819888089): pricelist, promo Tanpa DP, daftar unit full furnished, private viewing
+
+## Optional
+
+- [Sitemap](https://aerium-residence.co/sitemap.xml)
