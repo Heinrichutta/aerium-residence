@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aerium Residence — Taman Permata Buana, Jakarta Barat</title>
 <link rel="preload" as="image" href="images/web/outdoor-pool-evening-view-aerium.jpg" imagesrcset="images/web/outdoor-pool-evening-view-aerium-sm.jpg 900w, images/web/outdoor-pool-evening-view-aerium.jpg 2000w" imagesizes="100vw">
-<meta name="description" content="Aerium Residence by Sinar Mas Land di Taman Permata Buana, Jakarta Barat. 75% area hijau, Sky Garden setiap 4 lantai, apartemen dog-friendly pertama. Mulai Rp 3 Miliar. Promo Free DP / Tanpa DP.">
+<meta name="description" content="Aerium Residence by Sinar Mas Land di Taman Permata Buana, Jakarta Barat. 75% area hijau, Sky Garden di samping indoor pool, dog park &amp; dog café. Apartemen dog-friendly pertama. Mulai Rp 3 Miliar. Promo Free DP / Tanpa DP.">
 <meta property="og:title" content="Aerium Residence — Tempat Anda Bernapas Lagi">
-<meta property="og:description" content="75% area hijau. Sky Garden setiap 4 lantai. Mulai Rp 3 Miliar. Promo Tanpa DP.">
+<meta property="og:description" content="75% area hijau. Sky Garden, dog park &amp; dog café. Mulai Rp 3 Miliar. Promo Tanpa DP.">
 <meta property="og:image" content="images/web/outdoor-pool-evening-view-aerium.jpg">
 <meta name="theme-color" content="#1F3A33">
 
@@ -1404,6 +1404,44 @@ section {
     transform: scale(1.1);
 }
 
+.paws-tile {
+    border-radius: var(--radius-md);
+    background:
+        radial-gradient(90% 90% at 80% 10%, rgba(216, 181, 127, 0.35), transparent 60%),
+        linear-gradient(150deg, var(--color-terracotta), #8E4B35);
+    color: var(--color-linen);
+    padding: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    transition: all 0.4s var(--ease-card);
+}
+
+.paws-tile:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lift);
+}
+
+.paws-tile svg {
+    width: 34px;
+    height: 34px;
+    margin-bottom: auto;
+    opacity: 0.85;
+}
+
+.paws-tile strong {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    line-height: 1.15;
+}
+
+.paws-tile span {
+    font-size: 0.74rem;
+    opacity: 0.8;
+}
+
 .paws-list {
     list-style: none;
     display: grid;
@@ -2698,7 +2736,7 @@ section {
         <h1>Pulang ke tempat Anda bisa <em>bernapas</em> lagi.</h1>
 
         <p class="hero-sub">
-            75% lahannya hijau. Taman di langit setiap 4 lantai.
+            75% lahannya hijau. Sky Garden di samping kolam renang indoor.
             Di tengah Taman Permata Buana — kawasan yang sudah jadi selama puluhan tahun.
         </p>
 
@@ -2730,14 +2768,14 @@ section {
         <span class="marquee-item">Selected Unit Full Furnished</span>
         <span class="marquee-item">South Tower · 12 Unit per Lantai</span>
         <span class="marquee-item">Apartemen Dog-Friendly Pertama di Jakarta</span>
-        <span class="marquee-item">Sky Garden Setiap 4 Lantai</span>
+        <span class="marquee-item">Sky Garden · Dog Park · Dog Café</span>
         <span class="marquee-item">Sinar Mas Land × Itochu × Shimizu</span>
         <!-- duplicate for seamless loop -->
         <span class="marquee-item">Promo Free DP / Tanpa DP</span>
         <span class="marquee-item">Selected Unit Full Furnished</span>
         <span class="marquee-item">South Tower · 12 Unit per Lantai</span>
         <span class="marquee-item">Apartemen Dog-Friendly Pertama di Jakarta</span>
-        <span class="marquee-item">Sky Garden Setiap 4 Lantai</span>
+        <span class="marquee-item">Sky Garden · Dog Park · Dog Café</span>
         <span class="marquee-item">Sinar Mas Land × Itochu × Shimizu</span>
     </div>
 </div>
@@ -2759,11 +2797,11 @@ section {
             </p>
             <p class="reveal reveal-delay-2">
                 Tiga perempat lahannya dibiarkan hijau. Koridornya semi-terbuka, jadi angin dan cahaya masuk sampai ke depan pintu unit Anda.
-                Dan setiap empat lantai, ada taman di ketinggian — tempat Anda membaca, menelepon keluarga, atau sekadar diam sebentar.
+                Dan di samping kolam renang indoor, ada Sky Garden — tempat Anda membaca, menelepon keluarga, atau sekadar diam sebentar setelah berenang.
             </p>
             <div class="desire-signature reveal reveal-delay-3">
                 <div><strong data-count="75">0</strong><span>% area hijau</span></div>
-                <div><strong data-count="4">0</strong><span>lantai sekali, sky garden</span></div>
+                <div><strong><span data-count="1.8" data-decimals="1">0</span></strong><span>hektar lahan</span></div>
                 <div><strong data-count="4">0</strong><span>lapis keamanan</span></div>
             </div>
         </div>
@@ -2987,7 +3025,7 @@ section {
             <div class="sky-point reveal reveal-delay-3">
                 <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M24 40V20M24 20c0-7 6-12 14-12 0 8-6 12-14 12zM24 26c0-6-5-10-12-10 0 7 5 10 12 10z"/></svg>
                 <h4>Sky Garden</h4>
-                <p>Taman di ketinggian setiap 4 lantai. Hijau yang bisa Anda sentuh tanpa turun ke lobi.</p>
+                <p>Taman di ketinggian, tepat di samping kolam renang indoor. Selesai berenang, duduk di antara hijau.</p>
             </div>
         </div>
     </div>
@@ -3007,9 +3045,10 @@ section {
                 <img src="images/web/pool-aerium-luar-1-sm.jpg" srcset="images/web/pool-aerium-luar-1-sm.jpg 900w, images/web/pool-aerium-luar-1.jpg 2000w" sizes="(max-width: 960px) 100vw, 50vw" alt="Kolam renang outdoor Aerium" loading="lazy" onerror="this.remove()">
                 <span class="media-caption">Pool Area</span>
             </div>
-            <div class="media">
-                <img src="images/web/aerium-corridor-sm.jpg" srcset="images/web/aerium-corridor-sm.jpg 900w, images/web/aerium-corridor.jpg 2000w" sizes="(max-width: 960px) 100vw, 50vw" alt="Koridor Aerium dengan handrail" loading="lazy" onerror="this.remove()">
-                <span class="media-caption">Koridor</span>
+            <div class="paws-tile">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="6" cy="9" r="2.2"/><circle cx="10" cy="5" r="2.2"/><circle cx="14" cy="5" r="2.2"/><circle cx="18" cy="9" r="2.2"/><path d="M12 11c-3 0-6 4-6 6.5 0 2 2 2.5 3 2.5s2-.7 3-.7 2 .7 3 .7 3-.5 3-2.5c0-2.5-3-6.5-6-6.5z"/></svg>
+                <strong>Dog Park<br>&amp; Dog Café</strong>
+                <span>Lihat langsung saat private viewing</span>
             </div>
         </div>
 
@@ -3064,8 +3103,8 @@ section {
                     <img src="images/web/indoor-pool-aerium-sm.jpg" srcset="images/web/indoor-pool-aerium-sm.jpg 900w, images/web/indoor-pool-aerium.jpg 2000w" sizes="(max-width: 960px) 100vw, 50vw" alt="Kolam renang indoor semi-terbuka" loading="lazy" onerror="this.remove()">
                 </div>
                 <div class="facility-label">
-                    <h4>Indoor Pool</h4>
-                    <p>Hujan deras? Rutinitas berenang Anda tetap jalan.</p>
+                    <h4>Indoor Pool &amp; Sky Garden</h4>
+                    <p>Hujan deras? Rutinitas berenang tetap jalan — lalu duduk di Sky Garden di sampingnya.</p>
                 </div>
             </div>
             <div class="facility-card reveal reveal-delay-2">

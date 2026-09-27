@@ -15,7 +15,8 @@ To add a photo: put the original here, create both web sizes, and reference them
 | Bayangkan | high-floor-living-2-bedroom-aerium, master-bedroom-with-greenery-view |
 | Unit cards 2BR D / 2BR A-B / 3BR | wider-living-room-aerium, living-room-high-floor, living-room-high-floor-aerium |
 | Green concept | wide-outdoor-pool-aerium, children-playground-aerium |
-| Dog-friendly | outdoor-pool-view-housing-aerium, pool-aerium-luar-1, aerium-corridor |
+| Dog-friendly | outdoor-pool-view-housing-aerium, pool-aerium-luar-1 (+ Dog Park & Dog Café tile, no photo yet) |
+| Not used | aerium-corridor |
 | Facilities | pool-aerium-luar-2, indoor-pool-aerium, gym-aerium, lobby-aerium, perpustakaan-aerium, aerium-sauna, all-outdoor-pool-aerium, children-playground-aerium-2 |
 | Gallery (11) | living-aerium-super-wide-high-floor, kitchen-2-bedroom-wide, bedroom-high-floor, outdoor-pool-plus-side-area-aerium, kitchen-aerium, wide-living-room-low-floor, all-outdoor-pool-aerium, kitchen-2-bedroom, living-room, children-playground-aerium-2, outdoor-pool-view-housing-aerium |
 | Contact background | indoor-pool-night-aerium |
