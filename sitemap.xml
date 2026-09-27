@@ -6,24 +6,52 @@
     <lastmod>2026-09-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <image:image><image:loc>https://aerium-residence.co/images/web/outdoor-pool-evening-view-aerium.webp</image:loc><image:title>Kolam renang Aerium Residence saat senja</image:title></image:image>
-    <image:image><image:loc>https://aerium-residence.co/images/web/high-floor-living-2-bedroom-aerium.webp</image:loc><image:title>Ruang tamu 2 Bedroom lantai tinggi Aerium Residence</image:title></image:image>
-    <image:image><image:loc>https://aerium-residence.co/images/web/indoor-pool-aerium.webp</image:loc><image:title>Kolam renang indoor Aerium Residence</image:title></image:image>
-    <image:image><image:loc>https://aerium-residence.co/images/web/lobby-aerium.webp</image:loc><image:title>Grand lobby Aerium Residence</image:title></image:image>
-    <image:image><image:loc>https://aerium-residence.co/images/web/gym-aerium.webp</image:loc><image:title>Gym Aerium Residence</image:title></image:image>
+    <image:image><image:loc>https://aerium-residence.co/images/web/outdoor-pool-evening-view-aerium.webp</image:loc></image:image>
+    <image:image><image:loc>https://aerium-residence.co/images/web/high-floor-living-2-bedroom-aerium.webp</image:loc></image:image>
+    <image:image><image:loc>https://aerium-residence.co/images/web/indoor-pool-aerium.webp</image:loc></image:image>
+    <image:image><image:loc>https://aerium-residence.co/images/web/lobby-aerium.webp</image:loc></image:image>
+    <image:image><image:loc>https://aerium-residence.co/images/web/gym-aerium.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://aerium-residence.co/artikel/</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://aerium-residence.co/images/web/outdoor-pool-evening-view-aerium.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://aerium-residence.co/artikel/cafe-resto-permata-buana/</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://aerium-residence.co/images/web/outdoor-pool-view-housing-aerium.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://aerium-residence.co/artikel/restoran-puri-indah-mall-lippo-mall-puri/</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://aerium-residence.co/images/web/lobby-aerium.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://aerium-residence.co/artikel/sekolah-dekat-aerium/</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://aerium-residence.co/images/web/children-playground-aerium-2.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://aerium-residence.co/apartemen-dekat-puri-indah-mall/</loc>
     <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image><image:loc>https://aerium-residence.co/images/web/outdoor-pool-view-housing-aerium.webp</image:loc><image:title>Aerium Residence dekat Puri Indah Mall 2</image:title></image:image>
+    <image:image><image:loc>https://aerium-residence.co/images/web/outdoor-pool-view-housing-aerium.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://aerium-residence.co/apartemen-dog-friendly-jakarta/</loc>
     <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image><image:loc>https://aerium-residence.co/images/web/wide-outdoor-pool-aerium.webp</image:loc><image:title>Apartemen dog-friendly Aerium Residence</image:title></image:image>
+    <image:image><image:loc>https://aerium-residence.co/images/web/wide-outdoor-pool-aerium.webp</image:loc></image:image>
   </url>
 </urlset>

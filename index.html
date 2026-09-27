@@ -14,6 +14,8 @@
 <meta name="author" content="Berjaya Properties — PT Berjaya Global Makmur">
 <meta name="geo.region" content="ID-JK">
 <meta name="geo.placename" content="Kembangan, Jakarta Barat">
+<meta name="geo.position" content="-6.1671576;106.7427794">
+<meta name="ICBM" content="-6.1671576, 106.7427794">
 <meta property="article:modified_time" content="2026-09-27T09:00:00+07:00">
 
 <meta property="og:type" content="website">
@@ -37,10 +39,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style"
-  href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+  href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700&display=swap"
   onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700&display=swap">
 </noscript>
 
 <style>
@@ -69,8 +71,8 @@
     --color-line-inverse: rgba(246, 241, 231, 0.14);
     --color-wa: #25D366;
 
-    --font-display: 'Fraunces', 'Times New Roman', Georgia, serif;
-    --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --font-display: 'Instrument Serif', 'Times New Roman', Georgia, serif;
+    --font-body: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
     --space-xs: 0.5rem;
     --space-sm: 1rem;
@@ -162,17 +164,18 @@ h4 {
     font-weight: 400;
     line-height: 1.12;
     letter-spacing: -0.01em;
-    font-variation-settings: "opsz" 120;
 }
 
 h1 {
-    font-size: clamp(2.6rem, 6.4vw, 5.6rem);
-    font-weight: 300;
+    font-size: clamp(2.9rem, 7vw, 6.2rem);
+    font-weight: 400;
+    letter-spacing: -0.02em;
 }
 
 h2 {
-    font-size: clamp(2rem, 4.2vw, 3.4rem);
-    font-weight: 300;
+    font-size: clamp(2.2rem, 4.6vw, 3.7rem);
+    font-weight: 400;
+    letter-spacing: -0.015em;
 }
 
 h3 {
@@ -475,10 +478,25 @@ section {
     color: var(--color-text-inverse);
 }
 
-.navbar.scrolled {
+.navbar::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
     background: rgba(20, 40, 36, 0.92);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+/* Blur on a pseudo-element: backdrop-filter on .navbar itself would
+   trap the fixed mobile menu inside the bar. */
+.navbar.scrolled::before {
+    opacity: 1;
+}
+
+.navbar.scrolled {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
     height: 66px;
 }
@@ -2778,6 +2796,346 @@ section {
     }
 }
 
+
+/* =========================================================
+   WHY AERIUM
+   ========================================================= */
+.why {
+    background: var(--color-linen);
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.why-card {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-lg);
+    padding: 2rem 1.8rem;
+    transition: var(--transition);
+}
+
+.why-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-brass), var(--color-brass-light));
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.why-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lift);
+}
+
+.why-card:hover::before {
+    opacity: 1;
+}
+
+.why-num {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 2.6rem;
+    line-height: 1;
+    color: var(--color-brass);
+    margin-bottom: 1rem;
+}
+
+.why-card h3 {
+    font-size: 1.35rem;
+    color: var(--color-forest);
+    margin-bottom: 0.6rem;
+}
+
+.why-card p {
+    font-size: 0.92rem;
+    color: var(--color-text-soft);
+}
+
+/* =========================================================
+   3D MAP
+   ========================================================= */
+.map3d {
+    background: var(--color-forest-deep);
+    color: var(--color-text-inverse);
+}
+
+.map3d .lead {
+    color: rgba(246, 241, 231, 0.72);
+}
+
+.map3d h2 em {
+    color: var(--color-brass-light);
+}
+
+.map-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 1.2rem;
+}
+
+.map-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 1rem;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--color-line-inverse);
+    color: var(--color-linen);
+    font-size: 0.82rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.map-chip i {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+}
+
+.map-chip span {
+    font-size: 0.7rem;
+    opacity: 0.6;
+}
+
+.map-chip:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-brass-light);
+}
+
+.map-chip.is-active {
+    background: var(--color-brass);
+    border-color: var(--color-brass);
+    color: var(--color-forest-ink);
+}
+
+.map-shell {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--color-line-inverse);
+    box-shadow: var(--shadow-deep);
+    background: var(--color-forest-ink);
+}
+
+.map-canvas {
+    position: relative;
+    min-height: 600px;
+    background:
+        radial-gradient(60% 60% at 60% 40%, rgba(143, 174, 155, 0.18), transparent 70%),
+        var(--color-forest-ink);
+}
+
+.map-fallback {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+    padding: 2rem;
+    z-index: 3;
+}
+
+.map-side {
+    padding: 1.4rem;
+    border-left: 1px solid var(--color-line-inverse);
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.map-side-title {
+    font-size: 0.68rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-brass-light);
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.map-list {
+    list-style: none;
+}
+
+.map-item button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.8rem 0.6rem;
+    border-radius: var(--radius-sm);
+    text-align: left;
+    transition: var(--transition);
+}
+
+.map-item button:hover,
+.map-item.is-active button {
+    background: rgba(246, 241, 231, 0.08);
+    transform: translateX(4px);
+}
+
+.map-dot {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.map-item-text strong {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.map-item-text small {
+    font-size: 0.74rem;
+    opacity: 0.65;
+}
+
+.map-note {
+    font-size: 0.7rem;
+    opacity: 0.5;
+    margin-top: 1rem;
+}
+
+.map-marker {
+    width: 38px;
+    height: 38px;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    background: var(--pin);
+    border: 2px solid #fff;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.map-marker span {
+    transform: rotate(45deg);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.map-marker:hover {
+    transform: rotate(-45deg) scale(1.15);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+}
+
+.map-marker.is-home {
+    width: 50px;
+    height: 50px;
+    animation: breathe 3s ease-in-out infinite;
+}
+
+.map-marker.is-home span {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+}
+
+.map-pop {
+    font-family: var(--font-body);
+    color: var(--color-text);
+}
+
+.map-pop-cat {
+    display: block;
+    font-size: 0.62rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.map-pop strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--color-forest);
+    line-height: 1.2;
+    margin-bottom: 0.4rem;
+}
+
+.map-pop p {
+    font-size: 0.8rem;
+    color: var(--color-text-soft);
+    margin-bottom: 0.4rem;
+}
+
+.map-pop em {
+    display: block;
+    font-style: normal;
+    font-size: 0.74rem;
+    font-weight: 600;
+    color: var(--color-eucalyptus);
+}
+
+.map-pop a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--color-brass);
+}
+
+.maplibregl-popup-content {
+    border-radius: 12px !important;
+    padding: 1rem 1.1rem !important;
+    box-shadow: var(--shadow-lift) !important;
+}
+
+@media (max-width: 960px) {
+    .why-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .map-shell {
+        grid-template-columns: 1fr;
+    }
+
+    .map-canvas {
+        min-height: 460px;
+    }
+
+    .map-side {
+        border-left: none;
+        border-top: 1px solid var(--color-line-inverse);
+        max-height: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .map-canvas {
+        min-height: 400px;
+    }
+}
+
 /* =========================================================
    RESPONSIVE
    ========================================================= */
@@ -3066,6 +3424,11 @@ section {
       ],
       "parentOrganization": {
         "@id": "https://aerium-residence.co/#organization"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -6.1671576,
+        "longitude": 106.7427794
       }
     },
     {
@@ -3087,7 +3450,7 @@ section {
         "postalCode": "11610",
         "addressCountry": "ID"
       },
-      "hasMap": "https://maps.google.com/?q=Aerium+Residence+Taman+Permata+Buana",
+      "hasMap": "https://www.google.com/maps/place/AERIUM+RESIDENCE/@-6.1671576,106.7427794,17z",
       "petsAllowed": true,
       "numberOfAccommodationUnits": 366,
       "tourBookingPage": "https://wa.me/62819888089",
@@ -3179,7 +3542,12 @@ section {
         "https://aerium-residence.co/images/web/indoor-pool-aerium.webp",
         "https://aerium-residence.co/images/web/lobby-aerium.webp",
         "https://aerium-residence.co/images/web/gym-aerium.webp"
-      ]
+      ],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -6.1671576,
+        "longitude": 106.7427794
+      }
     },
     {
       "@type": "RealEstateListing",
@@ -3270,6 +3638,18 @@ section {
         {
           "@type": "Place",
           "name": "RS Pondok Indah – Puri Indah"
+        },
+        {
+          "@type": "Place",
+          "name": "Starbucks Permata Buana"
+        },
+        {
+          "@type": "Place",
+          "name": "Springfield School"
+        },
+        {
+          "@type": "Place",
+          "name": "Naked Papa"
         }
       ]
     },
@@ -3295,6 +3675,30 @@ section {
       "@type": "FAQPage",
       "@id": "https://aerium-residence.co/#faq",
       "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Apa bedanya tinggal di Aerium dengan apartemen di atas mall?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aerium berada di dalam kompleks perumahan mewah Taman Permata Buana, bukan di atas mall. Penghuni mendapat jalan kompleks untuk jogging, ± 75% area hijau, keamanan kawasan plus 4 lapis keamanan gedung, dan bisa jalan sore bersama anjing ke Starbucks Permata Buana — hal yang sulit didapat di apartemen yang menempel mall."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Lebih murah beli Aerium atau rumah di Permata Buana?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aerium jauh lebih terjangkau. Aerium 2 Bedroom mulai Rp 3.010.741.800, sementara listing rumah di Permata Buana sekitar Rp 5 Miliar untuk 144 m² dan Rp 12,5 Miliar untuk 200 m² tiga lantai; kavling kosong 250 m² saja Rp 7,12–11,2 Miliar. Perawatan apartemen juga ditangani pengelola gedung."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Apakah Aerium cocok untuk pensiunan atau yang sering ke luar negeri?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ya. Konsep lock & leave: tidak ada rumah kosong yang harus dijaga, atap atau taman yang harus dirawat. Keamanan berlapis (kawasan Taman Permata Buana + 4 lapis gedung) membuat unit aman ditinggal lama."
+          }
+        },
         {
           "@type": "Question",
           "name": "Berapa harga Aerium Residence 2026?",
@@ -3372,7 +3776,7 @@ section {
           "name": "Apa saja yang dekat Aerium Residence, termasuk Puri Indah Mall 2?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Di sekitar Aerium ada Puri Indah Mall dan Puri Indah Mall 2 (tenant seperti Tiong Bahru Bakery dari Singapura, ZUS Coffee, UNION, HiGeorge!, dan SMARA), Lippo Mall Puri di superblok St. Moritz (termasuk JW Marriott), RS Pondok Indah – Puri Indah, serta sekolah seperti Raffles International Christian School yang kampusnya berada di dalam Taman Permata Buana."
+            "text": "Di sekitar Aerium ada Puri Indah Mall dan Puri Indah Mall 2 (tenant seperti Tiong Bahru Bakery dari Singapura, ZUS Coffee, UNION, HiGeorge!, dan SMARA), Lippo Mall Puri di superblok St. Moritz (termasuk JW Marriott), RS Pondok Indah – Puri Indah, serta sekolah seperti Springfield School yang tiga kampusnya berada di dalam Taman Permata Buana."
           }
         },
         {
@@ -3443,8 +3847,22 @@ section {
                     <li><a href="#galeri">Galeri</a></li>
                 </ul>
             </li>
-            <li><a href="#sekitar" class="nav-link">Sekitar</a></li>
+            <li><a href="#peta" class="nav-link">Peta 3D</a></li>
             <li><a href="#lokasi" class="nav-link">Lokasi</a></li>
+            <li class="dropdown">
+                <button class="nav-link dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+                    Artikel
+                    <svg class="caret" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 3l4 4 4-4"/></svg>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="/artikel/">Semua Artikel <small>Hidup di sekitar Aerium</small></a></li>
+                    <li><a href="/artikel/cafe-resto-permata-buana/">Kafe &amp; Resto Permata Buana</a></li>
+                    <li><a href="/artikel/restoran-puri-indah-mall-lippo-mall-puri/">Resto Puri Indah Mall &amp; Lippo Mall Puri</a></li>
+                    <li><a href="/artikel/sekolah-dekat-aerium/">Sekolah dekat Aerium</a></li>
+                    <li><a href="/apartemen-dekat-puri-indah-mall/">Apartemen dekat Puri Indah Mall 2</a></li>
+                    <li><a href="/apartemen-dog-friendly-jakarta/">Apartemen Dog-Friendly Jakarta</a></li>
+                </ul>
+            </li>
             <li><a href="#faq" class="nav-link">FAQ</a></li>
             <li class="nav-cta-item">
                 <a href="#" class="btn btn-primary nav-cta js-wa" data-wa-context="jadwal private viewing">Private Viewing</a>
@@ -3582,6 +4000,77 @@ section {
             <div class="media media-sub tone-warm">
                 <img src="images/web/aerium-master-bedroom-with-greenery-view-sm.webp" srcset="images/web/aerium-master-bedroom-with-greenery-view-sm.webp 800w, images/web/aerium-master-bedroom-with-greenery-view.webp 1600w" sizes="(max-width: 960px) 100vw, 50vw" alt="Kamar tidur dengan view pepohonan hijau" onerror="this.remove()">
             </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- =====================================================
+     WHY AERIUM — INSIDE A LUXURY HOUSING ESTATE
+     ===================================================== -->
+<section class="why section-pad" id="kenapa-aerium">
+    <div class="container">
+        <div class="section-head">
+            <span class="section-label reveal">Kenapa Aerium Berbeda</span>
+            <p class="h2-kicker reveal">Apartemen dengan halaman seluas satu kompleks perumahan mewah.</p>
+            <h2 class="reveal reveal-delay-1">Apa bedanya Aerium dengan apartemen di atas mall <em>dan rumah di Permata Buana?</em></h2>
+            <p class="lead reveal reveal-delay-2">
+                <strong>Aerium berada di dalam Taman Permata Buana — kompleks perumahan mewah yang sudah jadi.</strong>
+                Anda mendapat jogging track, pohon rindang, dan keamanan kompleks yang tidak mungkin dimiliki apartemen di atas mall —
+                dengan harga dan perawatan yang jauh di bawah rumah tapak di kompleks yang sama.
+            </p>
+        </div>
+
+        <div class="why-grid">
+            <article class="why-card reveal">
+                <span class="why-num">01</span>
+                <h3>Jalan sore bersama anjing Anda ke Starbucks Permata Buana</h3>
+                <p>Keluar lobi, lewati jalan kompleks yang teduh, pesan kopi, pulang lagi. Ritual sore yang tidak bisa dilakukan dari apartemen di atas mall — di sana, "jalan sore" berarti lorong mall dan parkiran.</p>
+            </article>
+            <article class="why-card reveal reveal-delay-1">
+                <span class="why-num">02</span>
+                <h3>Jogging, hijau, dan udara kompleks mewah</h3>
+                <p>Jalan kompleks yang lebar dan tenang untuk lari pagi, ± 75% area hijau di lahan Aerium sendiri, dan Naked Papa di jalan yang sama — Jl. Pulau Melintang.</p>
+            </article>
+            <article class="why-card reveal reveal-delay-2">
+                <span class="why-num">03</span>
+                <h3>Keamanan berlapis: kompleks + gedung</h3>
+                <p>Anda dilindungi dua kali: keamanan kawasan Taman Permata Buana, lalu 4 lapis keamanan Aerium sampai pintu unit. Tenang saat Anda ke luar negeri berminggu-minggu.</p>
+            </article>
+            <article class="why-card reveal">
+                <span class="why-num">04</span>
+                <h3>Alamat Permata Buana, harga jauh di bawah rumahnya</h3>
+                <p>Rumah ± 144 m² di Permata Buana dipasarkan ± Rp 5 M, rumah 200 m² tiga lantai ± Rp 12,5 M, dan kavling kosong 250 m² saja Rp 7,12–11,2 M. Aerium 2 Bedroom mulai Rp 3,01 M.</p>
+            </article>
+            <article class="why-card reveal reveal-delay-1">
+                <span class="why-num">05</span>
+                <h3>Lock &amp; leave — ideal untuk pensiun atau sering ke luar negeri</h3>
+                <p>Tidak ada atap bocor, taman yang harus dipotong, atau rumah kosong yang dijaga. Kunci pintu, berangkat; pengelola gedung yang merawat.</p>
+            </article>
+            <article class="why-card reveal reveal-delay-2">
+                <span class="why-num">06</span>
+                <h3>Ukuran yang pas, bukan ratusan meter yang harus dirawat</h3>
+                <p>84–166 m² — cukup untuk keluarga, tanpa lantai-lantai kosong, ART tambahan, dan tagihan perawatan rumah besar di kompleks yang sama.</p>
+            </article>
+        </div>
+
+        <div class="table-wrap reveal">
+            <h3 class="table-title">Aerium vs apartemen di atas mall vs rumah di Permata Buana</h3>
+            <table class="data-table">
+                <thead>
+                    <tr><th scope="col"></th><th scope="col">Aerium Residence</th><th scope="col">Apartemen di atas mall</th><th scope="col">Rumah tapak Permata Buana</th></tr>
+                </thead>
+                <tbody>
+                    <tr><th scope="row">Lingkungan</th><td>Di dalam kompleks perumahan mewah, tenang</td><td>Menempel mall &amp; lalu lintas pengunjung</td><td>Di dalam kompleks perumahan mewah</td></tr>
+                    <tr><th scope="row">Jogging &amp; jalan sore</th><td>Jalan kompleks + ± 75% area hijau</td><td>Terbatas (podium / area mall)</td><td>Jalan kompleks</td></tr>
+                    <tr><th scope="row">Jalan kaki dengan anjing</th><td>Ya — ke Starbucks Permata Buana, dog park di Aerium</td><td>Umumnya terbatas</td><td>Ya</td></tr>
+                    <tr><th scope="row">Keamanan</th><td>Kawasan + 4 lapis gedung</td><td>Gedung</td><td>Kawasan + mandiri</td></tr>
+                    <tr><th scope="row">Harga masuk</th><td>Mulai Rp 3,01 M (± 84 m²)</td><td>—</td><td>± Rp 5 M (144 m²) · ± Rp 12,5 M (200 m², 3 lt)</td></tr>
+                    <tr><th scope="row">Perawatan</th><td>Dikelola pengelola gedung</td><td>Dikelola pengelola gedung</td><td>Mandiri: atap, taman, kebocoran, keamanan</td></tr>
+                    <tr><th scope="row">Pensiun / sering ke luar negeri</th><td>Lock &amp; leave</td><td>Lock &amp; leave</td><td>Rumah kosong perlu dijaga</td></tr>
+                </tbody>
+            </table>
+            <p class="table-note">Harga rumah &amp; kavling Permata Buana dari listing publik (Rumah123, 99.co, Pinhome), harga tanah ± Rp 30–40 juta/m². "—" = bervariasi, tidak kami rata-ratakan.</p>
         </div>
     </div>
 </section>
@@ -3997,11 +4486,11 @@ section {
                 loading="lazy"
                
                 referrerpolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps?q=Aerium+Residence+Taman+Permata+Buana+Jakarta+Barat&output=embed">
+                src="https://www.google.com/maps?q=-6.1671576,106.7427794&z=16&output=embed">
             </iframe>
             <div class="map-address">
                 <span>Jl. Pulau Melintang A No. 20, Kembangan Utara, Jakarta Barat 11610</span>
-                <a href="https://maps.google.com/?q=Aerium+Residence+Taman+Permata+Buana" target="_blank" rel="noopener">Buka Maps →</a>
+                <a href="https://www.google.com/maps/place/AERIUM+RESIDENCE/@-6.1671576,106.7427794,17z" target="_blank" rel="noopener">Buka Maps →</a>
             </div>
         </div>
     </div>
@@ -4058,7 +4547,7 @@ section {
 
             <article class="nearby-card reveal reveal-delay-1">
                 <h3>Sekolah di sekitar</h3>
-                <p>Raffles International Christian School (kampus di dalam Taman Permata Buana), Global Sevilla (± 5 menit), Kinderworld Montessori (± 6 menit), Notre Dame (± 8 menit).</p>
+                <p>Springfield School (3 kampus di dalam Taman Permata Buana), Kinderworld Montessori (di dalam Taman Permata Buana), Global Sevilla &amp; Bina Bangsa School Puri Indah, IPEKA Puri, dan Notre Dame Puri Indah.</p>
                 <p class="nearby-meta">Antar-jemput tanpa berangkat subuh</p>
             </article>
 
@@ -4091,6 +4580,37 @@ section {
             Baca juga: <a href="/apartemen-dekat-puri-indah-mall/">Apartemen dekat Puri Indah Mall 2</a> ·
             <a href="/apartemen-dog-friendly-jakarta/">Apartemen dog-friendly di Jakarta</a>
         </p>
+    </div>
+</section>
+
+
+<!-- =====================================================
+     INTERACTIVE 3D MAP
+     ===================================================== -->
+<section class="map3d section-pad" id="peta">
+    <div class="container">
+        <div class="section-head">
+            <span class="section-label is-light reveal">Peta 3D Interaktif</span>
+            <p class="h2-kicker reveal">Putar, miringkan, dan jelajahi lingkungan Anda berikutnya.</p>
+            <h2 class="reveal reveal-delay-1">Seberapa dekat Aerium ke <em>mall, sekolah, dan rumah sakit?</em></h2>
+            <p class="lead reveal reveal-delay-2">Klik titik di peta atau daftar di samping. Lingkaran putus-putus = radius 1 km dari Aerium. Seret dengan dua jari (atau Ctrl + scroll) untuk memutar &amp; zoom.</p>
+        </div>
+
+        <div class="map-chips reveal" id="mapChips" role="toolbar" aria-label="Filter kategori"></div>
+
+        <div class="map-shell reveal">
+            <div class="map-canvas" id="aeriumMap" role="region" aria-label="Peta 3D sekitar Aerium Residence">
+                <div class="map-fallback" id="mapFallback" hidden>
+                    <p>Peta 3D tidak dapat dimuat di perangkat ini.</p>
+                    <a class="btn btn-primary" href="https://www.google.com/maps/place/AERIUM+RESIDENCE/@-6.1671576,106.7427794,17z" target="_blank" rel="noopener">Buka di Google Maps</a>
+                </div>
+            </div>
+            <aside class="map-side">
+                <p class="map-side-title">Titik penting sekitar Aerium</p>
+                <ul class="map-list" id="mapList"></ul>
+                <p class="map-note">Jarak = garis lurus dari Aerium. Waktu tempuh dari sumber publik, dapat berbeda tergantung lalu lintas.</p>
+            </aside>
+        </div>
     </div>
 </section>
 
@@ -4220,6 +4740,18 @@ section {
 
         <div class="faq-list">
             <div class="faq-item reveal">
+                <h3 class="faq-q-text"><button class="faq-question" aria-expanded="false">Apa bedanya tinggal di Aerium dengan apartemen di atas mall?<span class="faq-icon"></span></button></h3>
+                <div class="faq-answer"><p>Aerium berada di dalam kompleks perumahan mewah Taman Permata Buana, bukan di atas mall. Penghuni mendapat jalan kompleks untuk jogging, ± 75% area hijau, keamanan kawasan plus 4 lapis keamanan gedung, dan bisa jalan sore bersama anjing ke Starbucks Permata Buana — hal yang sulit didapat di apartemen yang menempel mall.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <h3 class="faq-q-text"><button class="faq-question" aria-expanded="false">Lebih murah beli Aerium atau rumah di Permata Buana?<span class="faq-icon"></span></button></h3>
+                <div class="faq-answer"><p>Aerium jauh lebih terjangkau. Aerium 2 Bedroom mulai Rp 3.010.741.800, sementara listing rumah di Permata Buana sekitar Rp 5 Miliar untuk 144 m² dan Rp 12,5 Miliar untuk 200 m² tiga lantai; kavling kosong 250 m² saja Rp 7,12–11,2 Miliar. Perawatan apartemen juga ditangani pengelola gedung.</p></div>
+            </div>
+            <div class="faq-item reveal">
+                <h3 class="faq-q-text"><button class="faq-question" aria-expanded="false">Apakah Aerium cocok untuk pensiunan atau yang sering ke luar negeri?<span class="faq-icon"></span></button></h3>
+                <div class="faq-answer"><p>Ya. Konsep lock &amp; leave: tidak ada rumah kosong yang harus dijaga, atap atau taman yang harus dirawat. Keamanan berlapis (kawasan Taman Permata Buana + 4 lapis gedung) membuat unit aman ditinggal lama.</p></div>
+            </div>
+            <div class="faq-item reveal">
                 <h3 class="faq-q-text"><button class="faq-question" aria-expanded="false">Berapa harga Aerium Residence 2026?<span class="faq-icon"></span></button></h3>
                 <div class="faq-answer"><p>Harga Aerium Residence mulai Rp 3.010.741.800 untuk 2 Bedroom (± 84 m²) hingga ± Rp 6 Miliar untuk 3 Bedroom. Contoh: 3 Bedroom ± 144 m² sekitar Rp 5.306.896.500. Harga per m² berkisar ± Rp 35,8–36,9 juta. Harga final tergantung tipe, lantai, dan arah hadap.</p></div>
             </div>
@@ -4257,7 +4789,7 @@ section {
             </div>
             <div class="faq-item reveal">
                 <h3 class="faq-q-text"><button class="faq-question" aria-expanded="false">Apa saja yang dekat Aerium Residence, termasuk Puri Indah Mall 2?<span class="faq-icon"></span></button></h3>
-                <div class="faq-answer"><p>Di sekitar Aerium ada Puri Indah Mall dan Puri Indah Mall 2 (tenant seperti Tiong Bahru Bakery dari Singapura, ZUS Coffee, UNION, HiGeorge!, dan SMARA), Lippo Mall Puri di superblok St. Moritz (termasuk JW Marriott), RS Pondok Indah – Puri Indah, serta sekolah seperti Raffles International Christian School yang kampusnya berada di dalam Taman Permata Buana.</p></div>
+                <div class="faq-answer"><p>Di sekitar Aerium ada Puri Indah Mall dan Puri Indah Mall 2 (tenant seperti Tiong Bahru Bakery dari Singapura, ZUS Coffee, UNION, HiGeorge!, dan SMARA), Lippo Mall Puri di superblok St. Moritz (termasuk JW Marriott), RS Pondok Indah – Puri Indah, serta sekolah seperti Springfield School yang tiga kampusnya berada di dalam Taman Permata Buana.</p></div>
             </div>
             <div class="faq-item reveal">
                 <h3 class="faq-q-text"><button class="faq-question" aria-expanded="false">Apa bedanya Aerium dengan St. Moritz atau The Windsor Puri?<span class="faq-icon"></span></button></h3>
@@ -4375,6 +4907,7 @@ section {
                     <li><a href="#sekitar">Sekitar Aerium</a></li>
                     <li><a href="/apartemen-dekat-puri-indah-mall/">Apartemen dekat Puri Indah Mall 2</a></li>
                     <li><a href="/apartemen-dog-friendly-jakarta/">Apartemen dog-friendly Jakarta</a></li>
+                    <li><a href="/artikel/">Semua artikel</a></li>
                 </ul>
             </div>
             <div>
@@ -4617,5 +5150,6 @@ section {
     document.getElementById('year').textContent = new Date().getFullYear();
 })();
 </script>
+<script src="/js/aerium-map.js" defer></script>
 </body>
 </html>
