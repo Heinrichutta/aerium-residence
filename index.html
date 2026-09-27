@@ -3017,6 +3017,21 @@ section {
     margin-top: 1rem;
 }
 
+.map-fallback[hidden] {
+    display: none;
+}
+
+.map-marker-wrap {
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.map-marker-wrap.is-home {
+    z-index: 5;
+}
+
 .map-marker {
     width: 38px;
     height: 38px;
@@ -3038,18 +3053,30 @@ section {
     font-weight: 700;
 }
 
-.map-marker:hover {
+.map-marker-wrap:hover .map-marker {
     transform: rotate(-45deg) scale(1.15);
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
 }
 
-.map-marker.is-home {
+.is-home .map-marker {
     width: 50px;
     height: 50px;
-    animation: breathe 3s ease-in-out infinite;
+    animation: homePulse 3s ease-in-out infinite;
 }
 
-.map-marker.is-home span {
+@keyframes homePulse {
+    0%,
+    100% {
+        transform: rotate(-45deg) scale(1);
+        box-shadow: 0 0 0 0 rgba(184, 144, 90, 0.55);
+    }
+    50% {
+        transform: rotate(-45deg) scale(1.08);
+        box-shadow: 0 0 0 14px rgba(184, 144, 90, 0);
+    }
+}
+
+.is-home .map-marker span {
     font-family: var(--font-display);
     font-size: 1.4rem;
 }
@@ -3090,6 +3117,12 @@ section {
     font-size: 0.74rem;
     font-weight: 600;
     color: var(--color-eucalyptus);
+}
+
+.map-pop-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem 0.8rem;
 }
 
 .map-pop a {
@@ -3728,7 +3761,7 @@ section {
           "name": "Di mana lokasi Aerium Residence?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Aerium Residence berada di Jl. Pulau Melintang A No. 20, Kembangan Utara, Jakarta Barat 11610, di dalam kawasan Taman Permata Buana. Jaraknya ± 9 menit ke RS Pondok Indah – Puri Indah, ± 11 menit ke Puri Indah Mall, dekat akses Tol JORR 2 dan Tol Jakarta–Merak, serta ± 30 menit ke Bandara Soekarno-Hatta."
+            "text": "Aerium Residence berada di Jl. Pulau Melintang A No. 20, Kembangan Utara, Jakarta Barat 11610, di dalam kawasan Taman Permata Buana. Jarak tempuhnya (rute berkendara, lalu lintas lancar): ± 3,6 km / 7 menit ke RS Pondok Indah – Puri Indah, ± 4,5 km / 8 menit ke Puri Indah Mall, ± 4,4 km / 7 menit ke Gerbang Tol JORR Kembangan Utara, dan ± 20,5 km / 24 menit ke Bandara Soekarno-Hatta."
           }
         },
         {
@@ -3776,7 +3809,7 @@ section {
           "name": "Apa saja yang dekat Aerium Residence, termasuk Puri Indah Mall 2?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Di sekitar Aerium ada Puri Indah Mall dan Puri Indah Mall 2 (tenant seperti Tiong Bahru Bakery dari Singapura, ZUS Coffee, UNION, HiGeorge!, dan SMARA), Lippo Mall Puri di superblok St. Moritz (termasuk JW Marriott), RS Pondok Indah – Puri Indah, serta sekolah seperti Springfield School yang tiga kampusnya berada di dalam Taman Permata Buana."
+            "text": "Di sekitar Aerium ada Puri Indah Mall dan Puri Indah Mall 2 (122 tenant F&B, termasuk Tiong Bahru Bakery dan ZUS Coffee di area ekspansi, serta UNION, Hi George!, dan Smara Kitchen di Puri Indah Mall 2), Lippo Mall Puri di superblok St. Moritz, RS Pondok Indah – Puri Indah, serta sekolah seperti Springfield School yang tiga kampusnya berada di dalam Taman Permata Buana."
           }
         },
         {
@@ -4025,12 +4058,12 @@ section {
             <article class="why-card reveal">
                 <span class="why-num">01</span>
                 <h3>Jalan sore bersama anjing Anda ke Starbucks Permata Buana</h3>
-                <p>Keluar lobi, lewati jalan kompleks yang teduh, pesan kopi, pulang lagi. Ritual sore yang tidak bisa dilakukan dari apartemen di atas mall — di sana, "jalan sore" berarti lorong mall dan parkiran.</p>
+                <p>± 1,3 km lewat jalan kompleks yang teduh — ± 20 menit jalan santai. Pesan kopi, lalu pulang. Ritual sore yang tidak bisa dilakukan dari apartemen di atas mall — di sana, "jalan sore" berarti lorong mall dan parkiran.</p>
             </article>
             <article class="why-card reveal reveal-delay-1">
                 <span class="why-num">02</span>
                 <h3>Jogging, hijau, dan udara kompleks mewah</h3>
-                <p>Jalan kompleks yang lebar dan tenang untuk lari pagi, ± 75% area hijau di lahan Aerium sendiri, dan Naked Papa di jalan yang sama — Jl. Pulau Melintang.</p>
+                <p>Jalan kompleks yang lebar dan tenang untuk lari pagi, ± 75% area hijau di lahan Aerium sendiri, Naked Papa ± 30 m dari lobi (Jl. Pulau Melintang 7), dan lapangan basket Permata Buana tepat di depan.</p>
             </article>
             <article class="why-card reveal reveal-delay-2">
                 <span class="why-num">03</span>
@@ -4063,7 +4096,7 @@ section {
                 <tbody>
                     <tr><th scope="row">Lingkungan</th><td>Di dalam kompleks perumahan mewah, tenang</td><td>Menempel mall &amp; lalu lintas pengunjung</td><td>Di dalam kompleks perumahan mewah</td></tr>
                     <tr><th scope="row">Jogging &amp; jalan sore</th><td>Jalan kompleks + ± 75% area hijau</td><td>Terbatas (podium / area mall)</td><td>Jalan kompleks</td></tr>
-                    <tr><th scope="row">Jalan kaki dengan anjing</th><td>Ya — ke Starbucks Permata Buana, dog park di Aerium</td><td>Umumnya terbatas</td><td>Ya</td></tr>
+                    <tr><th scope="row">Jalan kaki dengan anjing</th><td>Ya — ke Starbucks Permata Buana (± 1,3 km), dog park di Aerium</td><td>Umumnya terbatas</td><td>Ya</td></tr>
                     <tr><th scope="row">Keamanan</th><td>Kawasan + 4 lapis gedung</td><td>Gedung</td><td>Kawasan + mandiri</td></tr>
                     <tr><th scope="row">Harga masuk</th><td>Mulai Rp 3,01 M (± 84 m²)</td><td>—</td><td>± Rp 5 M (144 m²) · ± Rp 12,5 M (200 m², 3 lt)</td></tr>
                     <tr><th scope="row">Perawatan</th><td>Dikelola pengelola gedung</td><td>Dikelola pengelola gedung</td><td>Mandiri: atap, taman, kebocoran, keamanan</td></tr>
@@ -4458,26 +4491,27 @@ section {
 
             <ul class="distance-list">
                 <li class="distance-item reveal">
-                    <span class="time">9<small>mnt</small></span>
-                    <div><h4>RS Pondok Indah – Puri Indah</h4><p>Rumah sakit rujukan, dekat saat paling dibutuhkan.</p></div>
+                    <span class="time">7<small>mnt</small></span>
+                    <div><h4>RS Pondok Indah – Puri Indah</h4><p>± 3,6 km rute berkendara. Rumah sakit rujukan, dekat saat paling dibutuhkan.</p></div>
                 </li>
                 <li class="distance-item reveal reveal-delay-1">
-                    <span class="time">11<small>mnt</small></span>
-                    <div><h4>Puri Indah Mall &amp; Lippo Mall Puri</h4><p>Belanja, kuliner, bioskop — akhir pekan tanpa macet panjang.</p></div>
+                    <span class="time">7–8<small>mnt</small></span>
+                    <div><h4>Puri Indah Mall &amp; Lippo Mall Puri</h4><p>± 3,2–4,5 km. 265 tenant F&amp;B di dua mall — akhir pekan tanpa macet panjang.</p></div>
                 </li>
                 <li class="distance-item reveal reveal-delay-2">
-                    <span class="time">Dekat</span>
-                    <div><h4>Tol JORR 2 &amp; Tol Jakarta–Merak</h4><p>Akses cepat ke pusat kota, Tangerang, dan BSD.</p></div>
+                    <span class="time">7<small>mnt</small></span>
+                    <div><h4>Gerbang Tol JORR Kembangan Utara</h4><p>± 4,4 km. Akses cepat ke pusat kota, Tangerang, BSD, dan bandara.</p></div>
                 </li>
                 <li class="distance-item reveal reveal-delay-3">
-                    <span class="time">30<small>mnt</small></span>
-                    <div><h4>Bandara Soekarno-Hatta</h4><p>Perjalanan bisnis &amp; liburan keluarga lebih ringan.</p></div>
+                    <span class="time">24<small>mnt</small></span>
+                    <div><h4>Bandara Soekarno-Hatta</h4><p>± 20,5 km. Perjalanan bisnis &amp; liburan keluarga lebih ringan.</p></div>
                 </li>
                 <li class="distance-item reveal reveal-delay-4">
-                    <span class="time">Dekat</span>
-                    <div><h4>Sekolah Nasional &amp; Internasional</h4><p>Antar-jemput anak tanpa harus berangkat subuh.</p></div>
+                    <span class="time">1<small>mnt</small></span>
+                    <div><h4>Springfield School PB3</h4><p>± 0,4 km. Sekolah internasional Cambridge di dalam Taman Permata Buana.</p></div>
                 </li>
             </ul>
+            <p class="map-note" style="margin-top:1rem;opacity:.6;font-size:.75rem">Waktu = rute berkendara saat lalu lintas lancar (OpenStreetMap/OSRM). Jam sibuk bisa lebih lama.</p>
         </div>
 
         <div class="map-wrap reveal reveal-delay-2">
@@ -4515,45 +4549,45 @@ section {
         <div class="nearby-grid">
             <article class="nearby-card is-feature reveal">
                 <span class="nearby-tag">Paling ramai dibicarakan</span>
-                <h3>Puri Indah Mall 2</h3>
-                <p>Ekspansi terbaru Puri Indah Mall — magnet kuliner baru Jakarta Barat. Beberapa tenant yang sudah hadir:</p>
+                <h3>Puri Indah Mall &amp; Puri Indah Mall 2</h3>
+                <p>122 tenant F&amp;B resmi — 96 di Puri Indah Mall, 26 di Puri Indah Mall 2. Beberapa yang paling dicari:</p>
                 <ul class="tenant-list">
-                    <li><strong>Tiong Bahru Bakery</strong><span>Bakery legendaris Singapura — croissant &amp; kouign-amann</span></li>
-                    <li><strong>ZUS Coffee</strong><span>Coffee chain Malaysia, outlet pertamanya di Indonesia ada di Puri Indah Mall</span></li>
-                    <li><strong>UNION</strong><span>Restoran &amp; bakery favorit Jakarta</span></li>
-                    <li><strong>HiGeorge!</strong><span>Thai comfort food yang viral dari PIK</span></li>
-                    <li><strong>SMARA</strong><span>Restoran baru di Puri Indah Mall 2</span></li>
+                    <li><strong>Tiong Bahru Bakery</strong><span>Bakery legendaris Singapura · area ekspansi GF</span></li>
+                    <li><strong>ZUS Coffee</strong><span>Coffee chain Malaysia · area ekspansi GF</span></li>
+                    <li><strong>UNION</strong><span>Restoran &amp; bakery · Puri Indah Mall 2, GF</span></li>
+                    <li><strong>Hi George!</strong><span>Thai comfort food · Puri Indah Mall 2, GF</span></li>
+                    <li><strong>Din Tai Fung Chef's Table</strong><span>Puri Indah Mall, lantai 2</span></li>
                 </ul>
-                <p class="nearby-meta">± 11 menit berkendara dari Aerium</p>
+                <p class="nearby-meta">± 4,5 km · ± 8 menit saat lancar</p>
             </article>
 
             <article class="nearby-card reveal reveal-delay-1">
-                <h3>Puri Indah Mall</h3>
-                <p>Mall premium pertama di Jakarta Barat: department store, bioskop, supermarket, dan ratusan tenant F&amp;B.</p>
-                <p class="nearby-meta">± 11 menit</p>
+                <h3>Starbucks Permata Buana</h3>
+                <p>Tujuan jalan sore warga Aerium — di dalam kawasan Taman Permata Buana. Bisa berjalan kaki bersama anjing Anda.</p>
+                <p class="nearby-meta">± 1,3 km garis lurus</p>
             </article>
 
             <article class="nearby-card reveal reveal-delay-2">
                 <h3>Lippo Mall Puri &amp; St. Moritz</h3>
-                <p>Superblok St. Moritz: Lippo Mall Puri, Living Plaza, JW Marriott Hotel, rumah sakit, dan sekolah dalam satu kawasan.</p>
-                <p class="nearby-meta">Koridor Puri Indah Raya</p>
+                <p>Superblok St. Moritz: Lippo Mall Puri, Living Plaza, St. Moritz Office Tower, dan apartemen St. Moritz dalam satu kawasan.</p>
+                <p class="nearby-meta">± 3,2 km · ± 7 menit saat lancar</p>
             </article>
 
             <article class="nearby-card reveal">
                 <h3>RS Pondok Indah – Puri Indah</h3>
                 <p>Rumah sakit rujukan keluarga, dekat saat paling dibutuhkan.</p>
-                <p class="nearby-meta">± 9 menit</p>
+                <p class="nearby-meta">± 3,6 km · ± 7 menit saat lancar</p>
             </article>
 
             <article class="nearby-card reveal reveal-delay-1">
                 <h3>Sekolah di sekitar</h3>
-                <p>Springfield School (3 kampus di dalam Taman Permata Buana), Kinderworld Montessori (di dalam Taman Permata Buana), Global Sevilla &amp; Bina Bangsa School Puri Indah, IPEKA Puri, dan Notre Dame Puri Indah.</p>
+                <p>Springfield School PB3 ± 0,4 km (3 kampus di Taman Permata Buana), Sekolah Trinitas ± 0,2 km, Global Sevilla Puri Indah ± 1,7 km, IPEKA Puri ± 3,5 km, Notre Dame Puri Indah ± 4,3 km (rute).</p>
                 <p class="nearby-meta">Antar-jemput tanpa berangkat subuh</p>
             </article>
 
             <article class="nearby-card reveal reveal-delay-2">
                 <h3>Akses tol &amp; bandara</h3>
-                <p>Dekat Tol JORR 2 dan Tol Jakarta–Merak. Bandara Soekarno-Hatta ± 30 menit.</p>
+                <p>Gerbang Tol JORR Kembangan Utara ± 4,4 km / 7 menit. Bandara Soekarno-Hatta ± 20,5 km / 24 menit saat lancar.</p>
                 <p class="nearby-meta">Kerja ke kota, liburan ke luar negeri</p>
             </article>
         </div>
@@ -4608,7 +4642,7 @@ section {
             <aside class="map-side">
                 <p class="map-side-title">Titik penting sekitar Aerium</p>
                 <ul class="map-list" id="mapList"></ul>
-                <p class="map-note">Jarak = garis lurus dari Aerium. Waktu tempuh dari sumber publik, dapat berbeda tergantung lalu lintas.</p>
+                <p class="map-note">Koordinat dari Google Maps &amp; OpenStreetMap. Waktu = rute berkendara saat lalu lintas lancar (OSRM); jam sibuk bisa lebih lama. Tanpa waktu = jarak garis lurus.</p>
             </aside>
         </div>
     </div>
@@ -4765,7 +4799,7 @@ section {
             </div>
             <div class="faq-item reveal">
                 <h3 class="faq-q-text"><button class="faq-question" aria-expanded="false">Di mana lokasi Aerium Residence?<span class="faq-icon"></span></button></h3>
-                <div class="faq-answer"><p>Aerium Residence berada di Jl. Pulau Melintang A No. 20, Kembangan Utara, Jakarta Barat 11610, di dalam kawasan Taman Permata Buana. Jaraknya ± 9 menit ke RS Pondok Indah – Puri Indah, ± 11 menit ke Puri Indah Mall, dekat akses Tol JORR 2 dan Tol Jakarta–Merak, serta ± 30 menit ke Bandara Soekarno-Hatta.</p></div>
+                <div class="faq-answer"><p>Aerium Residence berada di Jl. Pulau Melintang A No. 20, Kembangan Utara, Jakarta Barat 11610, di dalam kawasan Taman Permata Buana. Jarak tempuhnya (rute berkendara, lalu lintas lancar): ± 3,6 km / 7 menit ke RS Pondok Indah – Puri Indah, ± 4,5 km / 8 menit ke Puri Indah Mall, ± 4,4 km / 7 menit ke Gerbang Tol JORR Kembangan Utara, dan ± 20,5 km / 24 menit ke Bandara Soekarno-Hatta.</p></div>
             </div>
             <div class="faq-item reveal">
                 <h3 class="faq-q-text"><button class="faq-question" aria-expanded="false">Apakah Aerium Residence sudah siap huni?<span class="faq-icon"></span></button></h3>
@@ -4789,7 +4823,7 @@ section {
             </div>
             <div class="faq-item reveal">
                 <h3 class="faq-q-text"><button class="faq-question" aria-expanded="false">Apa saja yang dekat Aerium Residence, termasuk Puri Indah Mall 2?<span class="faq-icon"></span></button></h3>
-                <div class="faq-answer"><p>Di sekitar Aerium ada Puri Indah Mall dan Puri Indah Mall 2 (tenant seperti Tiong Bahru Bakery dari Singapura, ZUS Coffee, UNION, HiGeorge!, dan SMARA), Lippo Mall Puri di superblok St. Moritz (termasuk JW Marriott), RS Pondok Indah – Puri Indah, serta sekolah seperti Springfield School yang tiga kampusnya berada di dalam Taman Permata Buana.</p></div>
+                <div class="faq-answer"><p>Di sekitar Aerium ada Puri Indah Mall dan Puri Indah Mall 2 (122 tenant F&amp;B, termasuk Tiong Bahru Bakery dan ZUS Coffee di area ekspansi, serta UNION, Hi George!, dan Smara Kitchen di Puri Indah Mall 2), Lippo Mall Puri di superblok St. Moritz, RS Pondok Indah – Puri Indah, serta sekolah seperti Springfield School yang tiga kampusnya berada di dalam Taman Permata Buana.</p></div>
             </div>
             <div class="faq-item reveal">
                 <h3 class="faq-q-text"><button class="faq-question" aria-expanded="false">Apa bedanya Aerium dengan St. Moritz atau The Windsor Puri?<span class="faq-icon"></span></button></h3>

@@ -1,6 +1,6 @@
 # Aerium Residence
 
-> Aerium Residence adalah apartemen siap huni (selesai ± 2020) di Taman Permata Buana, Kembangan, Jakarta Barat 11610, dikembangkan Sinar Mas Land bersama Itochu Corporation dan Shimizu Corporation. Harga mulai Rp 3.010.741.800 (2 Bedroom ± 84 m²) hingga ± Rp 6 Miliar (3 Bedroom), promo Free DP / Tanpa DP, selected unit full furnished. Kontak marketing: WhatsApp +62 819 888 089 (Berjaya Properties — PT Berjaya Global Makmur). Terakhir diperbarui: 27 September 2026.
+> Aerium Residence adalah apartemen siap huni (selesai ± 2020) di Taman Permata Buana, Kembangan, Jakarta Barat 11610, dikembangkan Sinar Mas Land bersama Itochu Corporation dan Shimizu Corporation. Harga mulai Rp 3.010.741.800 (2 Bedroom ± 84 m²) hingga ± Rp 6 Miliar (3 Bedroom), promo Free DP / Tanpa DP, selected unit full furnished. Kontak marketing: WhatsApp +62 819 888 089 (Berjaya Properties — PT Berjaya Global Makmur). Terakhir diperbarui: 27 September 2026. Jarak tempuh = rute berkendara saat lalu lintas lancar (OSRM); koordinat dari Google Maps & OpenStreetMap.
 
 Situs ini adalah situs marketing (bukan situs resmi developer) yang dikelola PT Berjaya Global Makmur dalam kerja sama dengan developer. Harga dan promo indikatif dan dapat berubah.
 
@@ -18,18 +18,18 @@ Situs ini adalah situs marketing (bukan situs resmi developer) yang dikelola PT 
 - Sewa pasar (listing publik): ± Rp 110–220 juta/tahun; estimasi gross yield ± 3,7–4,6%
 - Dog-friendly pertama di Jakarta: dog park, dog café, dog pool, dog hotel (Social Dog), pet salon
 - Fasilitas: kolam renang outdoor, kolam renang indoor dengan Sky Garden di sampingnya, kids pool, children playground, gym, sauna, grand lobby, library & meeting room, smart home automation, 4 lapis keamanan
-- Jarak: RS Pondok Indah – Puri Indah ± 9 menit; Puri Indah Mall & Puri Indah Mall 2 ± 11 menit; dekat Tol JORR 2 & Tol Jakarta–Merak; Bandara Soekarno-Hatta ± 30 menit
-- Sekolah sekitar: Springfield School (3 kampus di dalam Taman Permata Buana; PB3 ± 450 m dari Aerium), Kinderworld Montessori (Taman Permata Buana Blok A2), Global Sevilla & Bina Bangsa School Puri Indah, IPEKA Puri, Notre Dame Puri Indah
+- Jarak: rute berkendara (lalu lintas lancar, OSRM): RS Pondok Indah – Puri Indah ± 3,6 km / 7 menit; Puri Indah Mall & Puri Indah Mall 2 ± 4,5 km / 8 menit; Lippo Mall Puri ± 3,2 km / 7 menit; Gerbang Tol JORR Kembangan Utara ± 4,4 km / 7 menit; Bandara Soekarno-Hatta ± 20,5 km / 24 menit; Starbucks Permata Buana ± 1,3 km garis lurus (bisa jalan kaki)
+- Sekolah sekitar: Sekolah Trinitas (± 200 m), Springfield School PB3 (± 0,4 km), PB1 & PB2 (Taman Permata Buana), Global Sevilla Puri Indah (± 1,7 km), Kinderworld Montessori (± 2,3 km), IPEKA Puri (± 3,5 km), Notre Dame Puri Indah (± 4,3 km)
 
 ## Halaman
 
 - [Aerium Residence — harga, tipe unit, promo Tanpa DP](https://aerium-residence.co/): halaman utama, tabel harga, fasilitas, lokasi, FAQ
-- [Apartemen dekat Puri Indah Mall 2](https://aerium-residence.co/apartemen-dekat-puri-indah-mall/): tenant Puri Indah Mall 2 (Tiong Bahru Bakery, ZUS Coffee, UNION, HiGeorge!, SMARA), perbandingan Aerium vs St. Moritz vs The Windsor
+- [Apartemen dekat Puri Indah Mall 2](https://aerium-residence.co/apartemen-dekat-puri-indah-mall/): tenant Puri Indah Mall 2 (UNION, Hi George!, Smara Kitchen, Bakerzin), Tiong Bahru Bakery & ZUS Coffee di area ekspansi, perbandingan Aerium vs St. Moritz vs The Windsor
 - [Apartemen dog-friendly di Jakarta](https://aerium-residence.co/apartemen-dog-friendly-jakarta/): fasilitas hewan peliharaan Aerium dan checklist memilih apartemen pet-friendly
 - [Artikel: hidup di sekitar Aerium](https://aerium-residence.co/artikel/): indeks semua artikel lingkungan
-- [Kafe & resto Permata Buana](https://aerium-residence.co/artikel/cafe-resto-permata-buana/): Starbucks Permata Buana, Naked Papa (@nakedpapa.id, Jl. Pulau Melintang 7 — satu jalan dengan Aerium), Garden by the Joglo (@gardenbythejoglo), Miss Marly (@missmarly.id), Perbun Coffee (@perbun.coffee)
-- [Restoran Puri Indah Mall & Lippo Mall Puri](https://aerium-residence.co/artikel/restoran-puri-indah-mall-lippo-mall-puri/): daftar tenant F&B kedua mall termasuk Puri Indah Mall 2
-- [Sekolah dekat Aerium](https://aerium-residence.co/artikel/sekolah-dekat-aerium/): Springfield School (PB1–PB3 di dalam Taman Permata Buana), Kinderworld Montessori, Global Sevilla, Bina Bangsa, IPEKA Puri, Notre Dame, Raffles Christian School Kebon Jeruk
+- [Kafe & resto Permata Buana](https://aerium-residence.co/artikel/cafe-resto-permata-buana/): 51 kafe & resto dalam radius 1,6 km dari Aerium + 24 di koridor Puri Kembangan, dengan jarak, rating Google, dan Instagram. Terdekat: Naked Papa (@nakedpapa.id) ± 30 m dari lobi; ruko Jl. Pulau Bira ± 500–600 m (EOWA Coffee @eowa.coffee, Kedai Kopi Kulo @kedaikopikulo, Haohao Dimsum @haohaodimsum, Ollie's @ollie.scafe); Starbucks Permata Buana & Miss Marly (@missmarly.id) ± 1,3 km
+- [Restoran Puri Indah Mall & Lippo Mall Puri](https://aerium-residence.co/artikel/restoran-puri-indah-mall-lippo-mall-puri/): daftar lengkap 265 tenant F&B dari direktori resmi — 96 di Puri Indah Mall, 26 di Puri Indah Mall 2, 143 di Lippo Mall Puri — dengan lantai & unit. Tiong Bahru Bakery (GFE002-004) dan ZUS Coffee (GFE005) di area ekspansi Puri Indah Mall; UNION, Hi George!, Smara Kitchen di Puri Indah Mall 2
+- [Sekolah dekat Aerium](https://aerium-residence.co/artikel/sekolah-dekat-aerium/): Sekolah Trinitas TK–SMA (± 200 m), Springfield School PB3 (± 0,4 km / 1 menit), PB1 (± 1,0 km), PB2 (± 1,4 km), Global Sevilla Puri Indah (± 1,7 km), Kinderworld Montessori (± 2,3 km), IPEKA Puri (± 3,5 km), Notre Dame Puri Indah (± 4,3 km), Raffles Christian School Kebon Jeruk (± 5,2 km) + semua sekolah/TK dalam 1 km (OpenStreetMap)
 
 ## Kontak
 
