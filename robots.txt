@@ -1,54 +1,75 @@
-# Aerium Residence — https://aerium-residence.co
+# aerium-residence.co robots.txt
+# Last Updated: 2026-10-06
+# Strategy: Allow AI search + citations, selective training, block scrapers
+
 User-agent: *
 Allow: /
 
-# AI / answer-engine crawlers (explicitly allowed for GEO)
-User-agent: GPTBot
-Allow: /
-
+# ===== AI SEARCH CRAWLERS (ALLOW — we want citations) =====
 User-agent: OAI-SearchBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: ClaudeBot
 Allow: /
 
 User-agent: Claude-SearchBot
 Allow: /
 
-User-agent: Claude-User
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
 User-agent: PerplexityBot
-Allow: /
-
-User-agent: Perplexity-User
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Applebot
 Allow: /
 
 User-agent: Applebot-Extended
 Allow: /
 
+User-agent: cohere-ai
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+# ===== USER-TRIGGERED AGENTS (ALLOW — real-time answers) =====
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+# ===== TRAINING CRAWLERS (ALLOW — brand exposure) =====
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 User-agent: Meta-ExternalAgent
 Allow: /
 
-User-agent: CCBot
+User-agent: Amazonbot
 Allow: /
+
+# ===== BLOCKED — Aggressive scrapers, no value =====
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
 
 Sitemap: https://aerium-residence.co/sitemap.xml

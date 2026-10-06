@@ -1,0 +1,53 @@
+name: IndexNow
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.html'
+  workflow_dispatch:
+    inputs:
+      all:
+        description: 'Kirim semua URL di sitemap.xml'
+        type: boolean
+        default: false
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Kirim URL ke IndexNow
+        env:
+          HOST: ${{ vars.INDEXNOW_HOST || 'aerium-residence.co' }}
+          KEY: ${{ secrets.INDEXNOW_KEY }}
+          SEND_ALL: ${{ inputs.all }}
+        run: |
+          if [ "$SEND_ALL" = "true" ]; then
+            grep -o '<loc>[^<]*' sitemap.xml | sed 's/<loc>//' > urls.txt
+          else
+            git diff --name-only --diff-filter=AM HEAD~1 HEAD -- '*.html' | while read -r f; do
+              p="${f%.html}"
+              case "$p" in
+                index) echo "https://$HOST/" ;;
+                */index) echo "https://$HOST/${p%index}" ;;
+                *) echo "https://$HOST/$p" ;;
+              esac
+            done > urls.txt
+          fi
+          echo "URL yang dikirim:"; cat urls.txt
+          [ -s urls.txt ] || { echo "Tidak ada URL"; exit 0; }
+          python3 - <<'PY'
+          import json, os
+          urls = [u.strip() for u in open('urls.txt') if u.strip()]
+          json.dump({"host": os.environ["HOST"], "key": os.environ["KEY"],
+                     "keyLocation": f"https://{os.environ['HOST']}/{os.environ['KEY']}.txt",
+                     "urlList": urls}, open('payload.json', 'w'))
+          PY
+          code=$(curl -s -o /dev/null -w '%{http_code}' -X POST https://api.indexnow.org/IndexNow \
+            -H 'Content-Type: application/json; charset=utf-8' --data @payload.json)
+          echo "IndexNow HTTP $code"
+          case "$code" in 200|202) ;; *) exit 1 ;; esac
