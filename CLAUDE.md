@@ -13,7 +13,6 @@
 ## 2. TECH STACK
 
 - **Hosting:** Cloudflare Pages — config via `_headers` file
-- **No vercel.json** — no redirect aliases needed
 - **Build:** None — pure static HTML, inline CSS/JS
 - **Language:** Bahasa Indonesia (`<html lang="id">`)
 - **Locales:** 1 (single-language site)
